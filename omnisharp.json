@@ -1,0 +1,9 @@
+{
+    "MSBuild": {
+        "UseLegacySdkResolver": true
+    },
+
+    "FormattingOptions": {
+        "enableEditorConfigSupport": true
+    }
+}
