@@ -1,0 +1,2 @@
+import pytest
+test_data = []@pytest.mark.parametrize("number,tests_number,expected_result", test_data)def test_is_prime(numbert:int, tests_number:int, expected_result:bool):assert expected_result == is_prime(number, tests_number)
