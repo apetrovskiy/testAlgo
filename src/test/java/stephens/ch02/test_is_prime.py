@@ -3,10 +3,10 @@ import pytest
 
 
 test_data = [
-    (5, 10, True),
+    (5, 100, True),
     (6, 2, False),
     (27, 5, False),
-    (37, 20, True)
+    (37, 100, True)
 ]
 
 
