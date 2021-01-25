@@ -19,8 +19,8 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 group :test do   # you can make groups for test, development, production..
   gem "rspec"
   gem 'rspec-expectations'
-  # gem 'rspec/core'
-  gem "capybara"
+  gem 'rspec-core'
+  # gem "capybara" # ruby < 3.0
 #   gem "rspec-sinatra"
 #   gem "cucumber"
 #   gem "coveralls", require: false
@@ -30,7 +30,7 @@ gem 'test-unit'
 # gem 'rails_helper'
 # gem 'param_test'
 # gem 'binding_ninja'
-# gem 'solargraph'
 # gem 'rspec-parameterized'
 gem 'minitest'
 gem 'bundler'
+# gem 'solargraph' # ruby < 3.0
