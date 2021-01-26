@@ -1,9 +1,10 @@
+=begin
 require 'test/unit'
 require 'rspec'
 require 'rspec/autorun'
 require './src/main/java/durr_vie/CharacterStrings/Anagrams/anagrams.rb'
 
-=begin
+
 RSpec.describe 'anagrams' do
   describe '#some_method_under_test' do
     subject { anagrams input }
