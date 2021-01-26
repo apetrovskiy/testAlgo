@@ -14,7 +14,6 @@ GEM
     diff-lcs (1.4.4)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.14.2)
     nokogiri (1.10.10-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     power_assert (1.2.0)
@@ -45,9 +44,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  bundler
   capybara
-  minitest
   rspec
   rspec-expectations
   test-unit
