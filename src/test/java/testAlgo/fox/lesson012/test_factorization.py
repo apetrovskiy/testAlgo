@@ -1,4 +1,6 @@
 import pytest
+from typing import List
+from src.main.java.testAlgo.fox.lesson012.factorization import factor
 
 
 test_data = [

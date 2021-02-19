@@ -1,3 +1,6 @@
+from typing import List
+
+
 def factor(n: int) -> List[int]:
     ans = []
     for d in range(2, n + 1):
