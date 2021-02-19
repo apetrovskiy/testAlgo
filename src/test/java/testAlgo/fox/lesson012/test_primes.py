@@ -1,5 +1,5 @@
 from typing import List
-from src.main.java.fox.lesson012.primes import is_prime_number
+from src.main.java.testAlgo.fox.lesson012.primes import is_prime_number
 import pytest
 
 
