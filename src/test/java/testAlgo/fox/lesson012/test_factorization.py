@@ -4,7 +4,7 @@ from src.main.java.testAlgo.fox.lesson012.factorization import factor
 
 
 test_data = [
-    (12, [2, 3, 4, 6])
+    (12, [2, 3])
 ]
 
 
