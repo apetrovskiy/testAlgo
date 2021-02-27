@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestFactorial(t *testing.T) {
+func TestFactorialSuite(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "Algorithms Suite")
 }
@@ -14,7 +14,7 @@ func TestFactorial(t *testing.T) {
 var _ = Describe("Factorial", func() {
 	Context("initially", func() {
 		It("of 4", func() {})
-		Specify("result is equal to 24",func(){})
+		Specify("result is equal to 24", func() {})
 	})
 	/*Context("initially", func() {
 		It("has 00 items", func() {})
@@ -22,3 +22,10 @@ var _ = Describe("Factorial", func() {
 		Specify("the total amount is 0.00", func() {})
 	})*/
 })
+
+func TestFactorial(t *testing.T) {
+	got := Factorial(4)
+	if got != 24 {
+		t.Errorf("Factorial(4) = %d; want", got)
+	}
+}
