@@ -24,8 +24,21 @@ var _ = Describe("Factorial", func() {
 })
 
 func TestFactorial(t *testing.T) {
-	got := Factorial(4)
-	if got != 24 {
-		t.Errorf("Factorial(4) = %d; want", got)
+	testCases := []struct {
+		input          int
+		expectedResult int
+	}{
+		{-1, 1},
+		{0, 1},
+		{1, 1},
+		{2, 2},
+		{4, 24},
+		{6, 720},
+	}
+	for _, tc := range testCases {
+		got := Factorial(tc.input)
+		if got != tc.expectedResult {
+			t.Errorf("Factorial(%d) = %d; want", tc.input, got)
+		}
 	}
 }
