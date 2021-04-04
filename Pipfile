@@ -36,6 +36,7 @@ wrapt = "==1.12.1"
 Flask = "*"
 
 [dev-packages]
+pytest = "*"
 
 [requires]
 python_version = "3.9"
