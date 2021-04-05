@@ -1,6 +1,6 @@
 import pytest
 from typing import List
-from src.main.java.stephens.ch06.heap import array_to_heap
+from src.main.java.testAlgo.stephens.ch06.heap import array_to_heap
 
 
 test_data = [

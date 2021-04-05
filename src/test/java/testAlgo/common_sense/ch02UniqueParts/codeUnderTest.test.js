@@ -1,4 +1,4 @@
-const codeUnderTest = require('../../../main/java/common_sense/ch02UniqueParts/codeUnderTest');
+const codeUnderTest = require('../../../../../main/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest');
 
 test('Equality case',()=>{
     result = codeUnderTest.isEquivalent({'hi':12},{'hi':12});

@@ -1,4 +1,4 @@
-from src.main.java.durr_vie.CharacterStrings.Anagrams.anagrams import anagrams
+from src.main.java.testAlgo.durr_vie.CharacterStrings.Anagrams.anagrams import anagrams
 from typing import List
 import pytest
 

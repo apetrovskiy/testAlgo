@@ -1,4 +1,4 @@
-from src.main.java.fox.lesson011.towers import move
+from src.main.java.testAlgo.fox.lesson011.towers import move
 import pytest
 
 
