@@ -49,7 +49,7 @@
 				}
 			]
 		},
-		"rubyTestExplorer.minitestDirectory": "./src/test/java/",
-		"rubyTestExplorer.rspecDirectory": "./src/test/java/"
+		"rubyTestExplorer.minitestDirectory": "./src/test/java/testAlgo/",
+		"rubyTestExplorer.rspecDirectory": "./src/test/java/testAlgo/"
 	}
 }

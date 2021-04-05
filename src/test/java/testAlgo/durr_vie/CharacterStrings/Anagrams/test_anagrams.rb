@@ -2,7 +2,7 @@
 require 'test/unit'
 require 'rspec'
 require 'rspec/autorun'
-require './src/main/java/durr_vie/CharacterStrings/Anagrams/anagrams.rb'
+require './src/main/java/testAlgo/durr_vie/CharacterStrings/Anagrams/anagrams.rb'
 
 
 RSpec.describe 'anagrams' do

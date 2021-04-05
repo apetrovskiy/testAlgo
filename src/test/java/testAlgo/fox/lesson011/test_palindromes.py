@@ -1,4 +1,4 @@
-from src.main.java.fox.lesson011.palindromes import is_palindrome
+from src.main.java.testAlgo.fox.lesson011.palindromes import is_palindrome
 import pytest
 
 
