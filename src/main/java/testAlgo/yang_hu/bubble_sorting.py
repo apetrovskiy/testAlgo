@@ -7,6 +7,6 @@ def swap(input_array: List[int], i: int):
 
 
 def bubble_sorting(input_array: List[int]):
-    [[(swap(input_array, i)) for i in range(0, max-1)]
+    [[swap(input_array, i) for i in range(0, max-1)]
      for max in range(len(input_array), 1, -1)]
     return input_array
