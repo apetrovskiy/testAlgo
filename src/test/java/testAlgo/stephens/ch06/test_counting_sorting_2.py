@@ -10,5 +10,6 @@ test_data = [
 
 
 @pytest.mark.parametrize("input_array,expected_result", test_data)
-def test_counting_sorting_2(input_array: List[int], expected_result: List[int]):
+def test_counting_sorting_2(input_array: List[int],
+                            expected_result: List[int]):
     assert expected_result == counting_sorting(input_array)

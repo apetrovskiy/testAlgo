@@ -1,4 +1,5 @@
-from src.main.java.testAlgo.stephens.ch02.find_factors import version01, version02
+from src.main.java.testAlgo.stephens.ch02.find_factors \
+    import version01, version02
 from typing import List
 import pytest
 

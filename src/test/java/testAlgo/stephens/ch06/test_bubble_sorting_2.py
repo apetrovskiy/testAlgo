@@ -1,6 +1,7 @@
 import pytest
 from typing import List
-from src.main.java.testAlgo.stephens.ch06.bubble_sorting_2 import bubble_sorting
+from src.main.java.testAlgo.stephens.ch06.bubble_sorting_2 \
+    import bubble_sorting
 
 
 test_data = [

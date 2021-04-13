@@ -14,7 +14,7 @@ test_data = [
 
 
 @pytest.mark.parametrize("input_array,search_value,expected_result", test_data)
-def test_dichotomy_binary_search(input_array: List[int], \
-    search_value: int, expected_result: int):
+def test_dichotomy_binary_search(input_array: List[int],
+                                 search_value: int, expected_result: int):
     assert expected_result == dichotomy_binary_search(
         input_array, search_value)
