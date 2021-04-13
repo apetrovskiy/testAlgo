@@ -8,6 +8,8 @@ test_data = [
 ]
 
 
+@allure.feature('Foxford')
+@allure.story('Factorization')
 @pytest.mark.parametrize("input,expected_result", test_data)
 def test_factorization(input: int, expected_result: List[int]):
     assert expected_result == factor(input)

@@ -10,6 +10,8 @@ test_data = [
 ]
 
 
+@allure.feature('Foxford')
+@allure.story('Palindrome')
 @pytest.mark.parametrize("input,expected_result", test_data)
 def test_is_palindrome(input: str, expected_result: bool):
     assert expected_result == is_palindrome(input)

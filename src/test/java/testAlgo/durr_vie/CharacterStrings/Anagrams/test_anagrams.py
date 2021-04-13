@@ -14,6 +14,8 @@ test_data = [
 ]
 
 
+@allure.feature('Durr Vie')
+@allure.story('Anagrams')
 @ pytest.mark.parametrize("input,expected_result", test_data)
 def test_anagrams(input: str, expected_result: List[str]):
     [x.sort() for x in expected_result]
