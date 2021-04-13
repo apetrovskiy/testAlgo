@@ -22,11 +22,11 @@ jobs:
         # pip install allure-pytest
         # sudo apt-add-repository ppa:qameta/allure
         # sudo apt-get update 
-        sudo apt-get install allure
+        # sudo apt-get install allure
         # pip3 uninstall pytest
         # pip3 install pytest
         # pip uninstall pytest
-        pip install pytest
+        # pip install pytest
     - name: Lint with flake8
       run: |
         flake8 .
