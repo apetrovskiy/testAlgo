@@ -25,7 +25,7 @@ jobs:
         sudo apt-get install allure
         # pip3 uninstall pytest
         # pip3 install pytest
-        pip uninstall pytest
+        # pip uninstall pytest
         pip install pytest
     - name: Lint with flake8
       run: |
