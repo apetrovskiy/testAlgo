@@ -6,11 +6,11 @@ from typing import List
 def version01_clean_python_mine(input: str) -> List[List[str]]:
     input_list = input.split(' ')
     print(input_list)
-    l = [(x, ''.join(sorted(x))) for x in input_list]
-    print(l)
-    dict1 = dict(l)
+    l1 = [(x, ''.join(sorted(x))) for x in input_list]
+    print(l1)
+    dict1 = dict(l1)
     print(dict1)
-    c = Counter(l)
+    c = Counter(l1)
     print(c)
     l2 = [(''.join(sorted(x)), x) for x in input_list]
     print(l2)

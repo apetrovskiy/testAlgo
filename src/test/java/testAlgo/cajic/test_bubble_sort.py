@@ -1,3 +1,4 @@
+import allure
 import pytest
 from typing import List
 from src.main.java.testAlgo.cajic.bubble_sort import bubble_sort
@@ -13,6 +14,8 @@ test_data = [
 ]
 
 
+@allure.feature('Sorting - Cajic')
+@allure.story('Bubble sort')
 @pytest.mark.parametrize("input_array,expected_result", test_data)
 def test_bubble_sort(input_array: List[int], expected_result: List[int]):
     assert expected_result == bubble_sort(input_array)
