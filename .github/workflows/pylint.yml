@@ -1,4 +1,4 @@
-name: Pylint
+name: flake8, pytest, Pylint, allure
 
 on: [push]
 
@@ -29,9 +29,9 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-#     - name: Analysing the code with pylint
-#       run: |
-#         pylint `ls -R|grep .py$|xargs`
+    - name: Analysing the code with pylint
+      run: |
+        pylint `ls -R|grep .py$|xargs`
   allure:
     name: Generate Allure Report
     runs-on: ubuntu-latest
