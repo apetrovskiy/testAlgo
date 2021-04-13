@@ -6,7 +6,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
@@ -15,28 +14,23 @@ jobs:
         python-version: 3.9
     - name: Install dependencies
       run: |
-        sudo apt-get install allure
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        # pip install pylint
-        # pip install flake8 pytest
-        # pip install allure-pytest
+        pip install pylint
+        pip install flake8 pytest
+        pip install allure-pytest
         # sudo apt-add-repository ppa:qameta/allure
         # sudo apt-get update 
-        # sudo apt-get install allure
-        # pip3 uninstall pytest
-        # pip3 install pytest
-        # pip uninstall pytest
-        # pip install pytest
+        sudo apt-get install allure
     - name: Lint with flake8
       run: |
         flake8 .
     - name: Test with pytest
       run: |
         pytest
-    - name: Analysing the code with pylint
-      run: |
-        pylint `ls -R|grep .py$|xargs`
+#     - name: Analysing the code with pylint
+#       run: |
+#         pylint `ls -R|grep .py$|xargs`
   allure:
     name: Generate Allure Report
     runs-on: ubuntu-latest
@@ -69,3 +63,4 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
+
