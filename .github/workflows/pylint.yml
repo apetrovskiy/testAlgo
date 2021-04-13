@@ -19,7 +19,11 @@ jobs:
         # pip install pylint
         pip install flake8 pytest
     - name: Lint with flake9
-      run: flake8 .
+      run: |
+        flake8 .
+    - name: Test with pytest
+      run: |
+        pytest
 #     - name: Analysing the code with pylint
 #       run: |
 #         pylint `ls -R|grep .py$|xargs`
