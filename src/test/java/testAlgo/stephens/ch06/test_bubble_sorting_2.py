@@ -1,3 +1,4 @@
+import allure
 import pytest
 from typing import List
 from src.main.java.testAlgo.stephens.ch06.bubble_sorting_2 \

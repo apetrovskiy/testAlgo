@@ -1,5 +1,6 @@
-from src.main.java.testAlgo.fox.lesson011.palindromes import is_palindrome
+import allure
 import pytest
+from src.main.java.testAlgo.fox.lesson011.palindromes import is_palindrome
 
 
 test_data = [

@@ -1,3 +1,4 @@
+import allure
 from src.main.java.testAlgo.stephens.ch02.is_prime import is_prime
 import pytest
 

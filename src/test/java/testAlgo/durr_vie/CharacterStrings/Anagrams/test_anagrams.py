@@ -1,7 +1,8 @@
+import allure
+import pytest
 from src.main.java.testAlgo.durr_vie.CharacterStrings.Anagrams.anagrams \
     import anagrams
 from typing import List
-import pytest
 
 
 test_data = [

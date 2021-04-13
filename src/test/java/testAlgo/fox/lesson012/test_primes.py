@@ -1,6 +1,7 @@
+import allure
+import pytest
 from typing import List
 from src.main.java.testAlgo.fox.lesson012.primes import is_prime_number
-import pytest
 
 
 test_data = [

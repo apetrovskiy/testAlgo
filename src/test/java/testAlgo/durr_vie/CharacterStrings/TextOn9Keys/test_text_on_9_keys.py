@@ -1,6 +1,7 @@
+import allure
+import pytest
 from src.main.java.testAlgo.durr_vie.CharacterStrings. \
     TextOn9Keys.text_on_9_keys import text_on_9_keys
-import pytest
 
 
 test_data = [(2665687, 'bonjour')]

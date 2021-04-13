@@ -1,3 +1,4 @@
+import allure
 import pytest
 from typing import List
 from src.main.java.testAlgo.cajic.bubble_sort import bubble_sort

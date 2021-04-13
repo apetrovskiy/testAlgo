@@ -1,3 +1,4 @@
+import allure
 from src.main.java.testAlgo.stephens.ch02.find_primes import find_primes
 from typing import List
 import pytest

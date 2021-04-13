@@ -1,5 +1,6 @@
-from src.main.java.testAlgo.fox.lesson011.towers import move
+import allure
 import pytest
+from src.main.java.testAlgo.fox.lesson011.towers import move
 
 
 test_data = [

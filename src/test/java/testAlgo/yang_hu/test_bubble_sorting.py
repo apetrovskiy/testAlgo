@@ -1,3 +1,4 @@
+import allure
 import pytest
 from typing import List
 from src.main.java.testAlgo.yang_hu.bubble_sorting import bubble_sorting
