@@ -1,6 +1,7 @@
 import pytest
 from typing import List
-from src.main.java.testAlgo.stephens.ch06.insert_sorting_2 import insert_sorting
+from src.main.java.testAlgo.stephens.ch06.insert_sorting_2 \
+    import insert_sorting
 
 
 test_data = [
