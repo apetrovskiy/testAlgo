@@ -1,3 +1,4 @@
+import allure
 import pytest
 from typing import List
 from src.main.java.testAlgo.yang_hu.bubble_sorting import bubble_sorting
@@ -12,6 +13,8 @@ test_data = [
 ]
 
 
+@allure.feature('Yang Hu')
+@allure.story('Bubble sorting')
 @pytest.mark.parametrize("input_array,expected_result", test_data)
 def test_bubble_sorting(input_array: List[int], expected_result: List[int]):
     assert expected_result == bubble_sorting(input_array)

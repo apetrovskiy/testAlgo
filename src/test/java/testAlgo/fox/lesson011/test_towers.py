@@ -1,5 +1,6 @@
-from src.main.java.testAlgo.fox.lesson011.towers import move
+import allure
 import pytest
+from src.main.java.testAlgo.fox.lesson011.towers import move
 
 
 test_data = [
@@ -10,6 +11,8 @@ test_data = [
 ]
 
 
+@allure.feature('Foxford')
+@allure.story('Towers')
 @pytest.mark.parametrize("n,start,finish,expected_result", test_data)
 def test_move(n, start, finish, expected_result):
     print("| N ring | start | finish |")
