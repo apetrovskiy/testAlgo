@@ -20,5 +20,6 @@
         "**/target": true
     },
     "rubyTestExplorer.minitestDirectory": "./src/test/java/testAlgo/",
-    "rubyTestExplorer.rspecDirectory": "./src/test/java/testAlgo/"
+    "rubyTestExplorer.rspecDirectory": "./src/test/java/testAlgo/",
+    "python.pythonPath": "C:\\Users\\Alexander Petrovskiy\\.virtualenvs\\testAlgo--4IGi_pG\\Scripts\\python.exe"
 }
