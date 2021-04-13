@@ -9,6 +9,7 @@ test_data = [
     (37, 100, True)
 ]
 
+
 @pytest.mark.skip(reason="no way of currently testing this")
 @pytest.mark.parametrize("number,tests_number,expected_result", test_data)
 def test_is_prime(number: int, tests_number: int, expected_result: bool):
