@@ -8,7 +8,8 @@ def insert_sorting(input_array: List[int]) -> List[int]:
         insert_position = i
         for j in range(insert_position-1, 1, -1):
             print(
-                f"insert element = {insert_element} insert position = {i} j = {j}")
+                f"insert element = \
+                    {insert_element} insert position = {i} j = {j}")
 
             if insert_element < input_array[j]:
                 input_array[j+1] = input_array[j]

@@ -1,7 +1,8 @@
 from typing import List
 
 
-def dichotomy_binary_search(input_array: List[int], search_value: int) -> List[int]:
+def dichotomy_binary_search(
+        input_array: List[int], search_value: int) -> List[int]:
     # TODO: implement this
     '''
     wrong
@@ -18,9 +19,10 @@ def dichotomy_binary_search(input_array: List[int], search_value: int) -> List[i
         print(f"new input = {input_array[0:mid_index]}")
         return dichotomy_binary_search(input_array[0:mid_index], search_value)
     if search_value > input_array[mid_index]:
-        print(f"from {input_array[mid_index+1]} to {input_array[len(input_array)-1]}")
-        print(f"new input = {input_array[mid_index+1:len(input_array)-1]}")
-        return dichotomy_binary_search(input_array[mid_index+1:len(input_array)-1], search_value)
+        print(f"from {input_array[mid_index+1]} to \
+            1:len(input_array)-1]}")
+        return dichotomy_binary_search(
+            input_array[mid_index+1:len(input_array)-1], search_value)
     '''
     # this works
     length = len(input_array)
