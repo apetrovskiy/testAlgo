@@ -1,6 +1,8 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/apetrovskiy/testAlgo/edit/feature/stephens-ch06-001/README.md) to maintain and preview the content for your website in Markdown files.
+You can use the [editor on GitHub](https://github.com/apetrovskiy/testAlgo/edit/develop/README.md) to maintain and preview the content for your website in Markdown files.
+
+[Allure](https://apetrovskiy.github.io/testAlgo/)
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
