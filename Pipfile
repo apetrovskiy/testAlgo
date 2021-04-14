@@ -53,11 +53,13 @@ allure-pytest = "*"
 pytest-xdist = "*"
 allure-behave = "*"
 allure-pytest-bdd = "*"
-allure-python-commons = "*"
+#allure-behave = "*"
+#allure-pytest-bdd = "*"
+#allure-python-commons = "*"
 
 [dev-packages]
-pytest = "*"
-nose = "*"
+#pytest = "*"
+#nose = "*"
 
 [requires]
 python_version = "3.9"
