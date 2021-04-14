@@ -31,7 +31,7 @@ def combine(array1: List[int], array2: List[int]) -> List[int]:
         print(f"almost final i = {i}")
         print(f"almost final j = {j}")
         # if len(result_array)<len(array1)+len(array2):
-            # print("less!")
+        # print("less!")
         i = i + 1
     return result_array
 
@@ -40,8 +40,9 @@ def merge_sort(input_array: List[int]) -> List[int]:
     if len(input_array) < 2:
         return [input_array, ]
     if len(input_array) == 2:
-        print(f"rearranging")
-        return input_array if input_array[0] < input_array[1] else [input_array[1], input_array[0]]
+        print("rearranging")
+        return input_array if input_array[0] < \
+            input_array[1] else [input_array[1], input_array[0]]
     half = len(input_array)//2
     print(f"half = {half}")
     print(f"array1 = {input_array[0:half]}")

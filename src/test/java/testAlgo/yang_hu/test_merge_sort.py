@@ -26,5 +26,6 @@ test_data_arrays = [
 
 @pytest.mark.skip(reason="TODO: no way of currently testing this")
 @pytest.mark.parametrize("input1,input2,expected_result", test_data_arrays)
-def test_combine(input1: List[int], input2: List[int], expected_result: List[int]):
+def test_combine(input1: List[int], input2: List[int],
+                 expected_result: List[int]):
     assert expected_result == combine(input1, input2)
