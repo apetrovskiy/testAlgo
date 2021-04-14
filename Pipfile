@@ -52,7 +52,8 @@ MarkupSafe = "==1.1.1"
 allure-pytest = "*"
 pytest-xdist = "*"
 allure-behave = "*"
-";allure-pytest-bdd" = "*"
+allure-pytest-bdd = "*"
+allure-python-commons = "*"
 
 [dev-packages]
 pytest = "*"
