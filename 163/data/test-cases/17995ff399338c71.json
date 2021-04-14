@@ -1,0 +1,101 @@
+{
+  "uid" : "17995ff399338c71",
+  "name" : "test_text_on_9_keys[2665687-bonjour]",
+  "fullName" : "src.test.java.testAlgo.durr_vie.CharacterStrings.TextOn9Keys.test_text_on_9_keys#test_text_on_9_keys",
+  "historyId" : "8f9277ccab8c358eb5ae9bfc87c07841",
+  "time" : {
+    "start" : 1618418763759,
+    "stop" : 1618418763759,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "Skipped: TODO: no way of currently testing this",
+  "statusTrace" : "('/home/runner/work/testAlgo/testAlgo/src/test/java/testAlgo/durr_vie/CharacterStrings/TextOn9Keys/test_text_on_9_keys.py', 10, 'Skipped: TODO: no way of currently testing this')",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Durr Vie"
+  }, {
+    "name" : "story",
+    "value" : "T9"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.skip(reason='TODO: no way of currently testing this')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.durr_vie.CharacterStrings.TextOn9Keys"
+  }, {
+    "name" : "suite",
+    "value" : "test_text_on_9_keys"
+  }, {
+    "name" : "host",
+    "value" : "fv-az196-119"
+  }, {
+    "name" : "thread",
+    "value" : "3154-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.durr_vie.CharacterStrings.TextOn9Keys.test_text_on_9_keys"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "'bonjour'"
+  }, {
+    "name" : "input",
+    "value" : "2665687"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 3,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "3f43edcf9d442da1",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/162//#testresult/3f43edcf9d442da1",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1618418626956,
+          "stop" : 1618418626956,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "aded0beef870c98b",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/156//#testresult/aded0beef870c98b",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1618417220009,
+          "stop" : 1618417220009,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.skip(reason='TODO: no way of currently testing this')" ]
+  },
+  "source" : "17995ff399338c71.json",
+  "parameterValues" : [ "'bonjour'", "2665687" ]
+}
