@@ -1,4 +1,4 @@
-name: flake8, pytest, Pylint, allure
+name: Python 3.9 with flake8, pytest, Pylint, allure
 
 on: [push]
 
