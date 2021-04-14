@@ -1,0 +1,59 @@
+{
+  "uid" : "e4d6ac1be509fcad",
+  "name" : "test_select_sorting[input_array2-expected_result2]",
+  "fullName" : "src.test.java.testAlgo.yang_hu.test_select_sorting#test_select_sorting",
+  "historyId" : "42a09090898711a71d1e238fae49d6ff",
+  "time" : {
+    "start" : 1618417227720,
+    "stop" : 1618417227720,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.yang_hu"
+  }, {
+    "name" : "suite",
+    "value" : "test_select_sorting"
+  }, {
+    "name" : "host",
+    "value" : "fv-az132-427"
+  }, {
+    "name" : "thread",
+    "value" : "3020-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.yang_hu.test_select_sorting"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[50, 60, 70, 80, 95]"
+  }, {
+    "name" : "input_array",
+    "value" : "[50, 80, 95, 60, 70]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e4d6ac1be509fcad.json",
+  "parameterValues" : [ "[50, 60, 70, 80, 95]", "[50, 80, 95, 60, 70]" ]
+}
