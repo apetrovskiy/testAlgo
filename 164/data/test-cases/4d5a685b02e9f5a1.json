@@ -1,0 +1,105 @@
+{
+  "uid" : "4d5a685b02e9f5a1",
+  "name" : "test_quick_sorting_2[input_array0-expected_result0]",
+  "fullName" : "src.test.java.testAlgo.stephens.ch06.test_quick_sorting_2#test_quick_sorting_2",
+  "historyId" : "93fe552590a8a4b90270675200dcfec8",
+  "time" : {
+    "start" : 1618420865334,
+    "stop" : 1618420865334,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "Skipped: TODO: no way of currently testing this",
+  "statusTrace" : "('/home/runner/work/testAlgo/testAlgo/src/test/java/testAlgo/stephens/ch06/test_quick_sorting_2.py', 12, 'Skipped: TODO: no way of currently testing this')",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.skip(reason='TODO: no way of currently testing this')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.stephens.ch06"
+  }, {
+    "name" : "suite",
+    "value" : "test_quick_sorting_2"
+  }, {
+    "name" : "host",
+    "value" : "fv-az199-417"
+  }, {
+    "name" : "thread",
+    "value" : "3178-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.stephens.ch06.test_quick_sorting_2"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+  }, {
+    "name" : "input_array",
+    "value" : "[0, 1, 2, 4, 5, 6, 3, 7, 8, 9]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 4,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "8617d0340e42d679",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/163//#testresult/8617d0340e42d679",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1618418770596,
+          "stop" : 1618418770596,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "e477956c5693b7ed",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/162//#testresult/e477956c5693b7ed",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1618418633450,
+          "stop" : 1618418633450,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "8a9c346171b0a8dd",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/156//#testresult/8a9c346171b0a8dd",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1618417227644,
+          "stop" : 1618417227644,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.skip(reason='TODO: no way of currently testing this')" ]
+  },
+  "source" : "4d5a685b02e9f5a1.json",
+  "parameterValues" : [ "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]", "[0, 1, 2, 4, 5, 6, 3, 7, 8, 9]" ]
+}
