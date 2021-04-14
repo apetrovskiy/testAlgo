@@ -1,0 +1,85 @@
+{
+  "uid" : "b1ecf56be5ce3ce5",
+  "name" : "test_primes_series[35-expected_result0]",
+  "fullName" : "src.test.java.testAlgo.fox.lesson012.test_primes#test_primes_series",
+  "historyId" : "c57442c407e769fb7a4fca17a0764282",
+  "time" : {
+    "start" : 1618418633381,
+    "stop" : 1618418633381,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Foxford"
+  }, {
+    "name" : "story",
+    "value" : "Primes series"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.fox.lesson012"
+  }, {
+    "name" : "suite",
+    "value" : "test_primes"
+  }, {
+    "name" : "host",
+    "value" : "fv-az132-427"
+  }, {
+    "name" : "thread",
+    "value" : "3075-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.fox.lesson012.test_primes"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]"
+  }, {
+    "name" : "input",
+    "value" : "35"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "c88033d3a12fc5cf",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/156//#testresult/c88033d3a12fc5cf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618417227573,
+          "stop" : 1618417227573,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b1ecf56be5ce3ce5.json",
+  "parameterValues" : [ "[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]", "35" ]
+}

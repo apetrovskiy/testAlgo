@@ -1,4 +1,16 @@
 [ {
+  "buildOrder" : 162,
+  "reportUrl" : "https://apetrovskiy.github.io/testAlgo/162/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 1,
+    "broken" : 0,
+    "skipped" : 13,
+    "passed" : 69,
+    "unknown" : 0,
+    "total" : 83
+  }
+}, {
   "buildOrder" : 161,
   "reportUrl" : "https://apetrovskiy.github.io/testAlgo/161/",
   "reportName" : "Allure Report with history",

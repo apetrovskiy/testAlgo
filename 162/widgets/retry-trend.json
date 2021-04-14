@@ -1,0 +1,46 @@
+[ {
+  "buildOrder" : 162,
+  "reportUrl" : "https://apetrovskiy.github.io/testAlgo/162/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "run" : 83,
+    "retry" : 0
+  }
+}, {
+  "buildOrder" : 161,
+  "reportUrl" : "https://apetrovskiy.github.io/testAlgo/161/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "run" : 0,
+    "retry" : 0
+  }
+}, {
+  "buildOrder" : 160,
+  "reportUrl" : "https://apetrovskiy.github.io/testAlgo/160/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "run" : 0,
+    "retry" : 0
+  }
+}, {
+  "buildOrder" : 159,
+  "reportUrl" : "https://apetrovskiy.github.io/testAlgo/159/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "run" : 0,
+    "retry" : 0
+  }
+}, {
+  "buildOrder" : 156,
+  "reportUrl" : "https://apetrovskiy.github.io/testAlgo/156/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "run" : 82,
+    "retry" : 0
+  }
+}, {
+  "data" : {
+    "run" : 0,
+    "retry" : 0
+  }
+} ]

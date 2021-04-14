@@ -1,0 +1,82 @@
+{
+  "uid" : "f9f75d1a578b7afd",
+  "name" : "test_dichotomy_binary_search[input_array0-50-2]",
+  "fullName" : "src.test.java.testAlgo.yang_hu.test_dichotomy_binary_search#test_dichotomy_binary_search",
+  "historyId" : "429c0ce1b085828b68851ccabd92e87d",
+  "time" : {
+    "start" : 1618418633469,
+    "stop" : 1618418633469,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.yang_hu"
+  }, {
+    "name" : "suite",
+    "value" : "test_dichotomy_binary_search"
+  }, {
+    "name" : "host",
+    "value" : "fv-az132-427"
+  }, {
+    "name" : "thread",
+    "value" : "3075-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.yang_hu.test_dichotomy_binary_search"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "2"
+  }, {
+    "name" : "input_array",
+    "value" : "[30, 40, 50, 70, 85, 90, 100]"
+  }, {
+    "name" : "search_value",
+    "value" : "50"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "a8901be08a7ec545",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/156//#testresult/a8901be08a7ec545",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618417227666,
+          "stop" : 1618417227666,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f9f75d1a578b7afd.json",
+  "parameterValues" : [ "2", "[30, 40, 50, 70, 85, 90, 100]", "50" ]
+}
