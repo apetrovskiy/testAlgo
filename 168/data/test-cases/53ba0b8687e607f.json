@@ -1,0 +1,130 @@
+{
+  "uid" : "53ba0b8687e607f",
+  "name" : "test_find_factors_version02[10-expected_result1]",
+  "fullName" : "src.test.java.testAlgo.stephens.ch02.test_find_factors#test_find_factors_version02",
+  "historyId" : "f6df6c644e2cde4b99d7884fce4923f3",
+  "time" : {
+    "start" : 1618425546566,
+    "stop" : 1618425546566,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Stephens"
+  }, {
+    "name" : "story",
+    "value" : "Find factors, v2"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.stephens.ch02"
+  }, {
+    "name" : "suite",
+    "value" : "test_find_factors"
+  }, {
+    "name" : "host",
+    "value" : "fv-az132-420"
+  }, {
+    "name" : "thread",
+    "value" : "3008-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.stephens.ch02.test_find_factors"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[2, 5]"
+  }, {
+    "name" : "input",
+    "value" : "10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 7,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "a55bc53af5bcd0c8",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/166//#testresult/a55bc53af5bcd0c8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618422119309,
+          "stop" : 1618422119309,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "c85be161761f43df",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/165//#testresult/c85be161761f43df",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618421004805,
+          "stop" : 1618421004806,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "6bb1814dcee33206",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/164//#testresult/6bb1814dcee33206",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618420865295,
+          "stop" : 1618420865295,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "570cb8ab45228eac",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/163//#testresult/570cb8ab45228eac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618418770557,
+          "stop" : 1618418770557,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "acffb269756e0d2e",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/162//#testresult/acffb269756e0d2e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618418633406,
+          "stop" : 1618418633406,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "11ec9e02a6d88157",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/156//#testresult/11ec9e02a6d88157",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618417227597,
+          "stop" : 1618417227598,
+          "duration" : 1
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "53ba0b8687e607f.json",
+  "parameterValues" : [ "[2, 5]", "10" ]
+}
