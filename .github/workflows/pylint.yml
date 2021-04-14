@@ -34,12 +34,12 @@ jobs:
 #     - name: Analysing the code with pylint
 #       run: |
 #         pylint `ls -R|grep .py$|xargs`
-  allure:
-    needs: build
-    name: Generate Allure Report
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
+#   allure:
+#     needs: build
+#     name: Generate Allure Report
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v2
 
     - name: Get Allure history
       uses: actions/checkout@v2
