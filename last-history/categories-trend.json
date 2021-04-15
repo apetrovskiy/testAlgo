@@ -1,4 +1,11 @@
 [ {
+  "buildOrder" : 169,
+  "reportUrl" : "https://apetrovskiy.github.io/testAlgo/169/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "Product defects" : 11
+  }
+}, {
   "buildOrder" : 168,
   "reportUrl" : "https://apetrovskiy.github.io/testAlgo/168/",
   "reportName" : "Allure Report with history",
