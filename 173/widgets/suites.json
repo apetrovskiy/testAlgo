@@ -1,0 +1,103 @@
+{
+  "total" : 9,
+  "items" : [ {
+    "uid" : "a8d41a78ec2341dbe1cabc641e2157a8",
+    "name" : "src.test.java.testAlgo.stephens.ch06",
+    "statistic" : {
+      "failed" : 6,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 5,
+      "unknown" : 0,
+      "total" : 11
+    }
+  }, {
+    "uid" : "703384af05e9934883986e200bb12593",
+    "name" : "src.test.java.testAlgo.stephens.ch02",
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 14,
+      "unknown" : 0,
+      "total" : 16
+    }
+  }, {
+    "uid" : "d7338a0381d1b808999994c6e325c568",
+    "name" : "src.test.java.testAlgo.yang_hu",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 27,
+      "unknown" : 0,
+      "total" : 28
+    }
+  }, {
+    "uid" : "f5ff9abd39deb2a26f3f94b682b859f4",
+    "name" : "src.test.java.testAlgo.durr_vie.CharacterStrings.TextOn9Keys",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "1dedf1acf47352c18b765ee1951f4a47",
+    "name" : "src.test.java.testAlgo.cajic",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 12,
+      "unknown" : 0,
+      "total" : 12
+    }
+  }, {
+    "uid" : "5f1235a91a6cc7dee62dd96ea684dc34",
+    "name" : "src.test.java.testAlgo.fox.lesson011",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 7,
+      "unknown" : 0,
+      "total" : 7
+    }
+  }, {
+    "uid" : "d4df404dc2b3d16829f243b6439d0d6e",
+    "name" : "src.test.java.testAlgo.fox.lesson012",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 5,
+      "unknown" : 0,
+      "total" : 5
+    }
+  }, {
+    "uid" : "99f02a5d56937b0a24c289b43eb9e7db",
+    "name" : "src.test.java.testAlgo.ahmad.ch03",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "d83d61126ed48d6b6585098fde439d06",
+    "name" : "src.test.java.testAlgo.durr_vie.CharacterStrings.Anagrams",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
+}
