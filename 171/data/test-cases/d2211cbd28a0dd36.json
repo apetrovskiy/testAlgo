@@ -1,0 +1,148 @@
+{
+  "uid" : "d2211cbd28a0dd36",
+  "name" : "test_is_palindrome[aaab-False]",
+  "fullName" : "src.test.java.testAlgo.fox.lesson011.test_palindromes#test_is_palindrome",
+  "historyId" : "10fdaf2f3d6fa8d854850fdde4864a45",
+  "time" : {
+    "start" : 1618469047498,
+    "stop" : 1618469047498,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Palindrome"
+  }, {
+    "name" : "feature",
+    "value" : "Foxford"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.fox.lesson011"
+  }, {
+    "name" : "suite",
+    "value" : "test_palindromes"
+  }, {
+    "name" : "host",
+    "value" : "fv-az173-429"
+  }, {
+    "name" : "thread",
+    "value" : "3047-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.fox.lesson011.test_palindromes"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "False"
+  }, {
+    "name" : "input",
+    "value" : "'aaab'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 9,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "f9d3f94d25c0bf84",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/169//#testresult/f9d3f94d25c0bf84",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618466882080,
+          "stop" : 1618466882080,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "95f646dbc29bd07c",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/168//#testresult/95f646dbc29bd07c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618425539562,
+          "stop" : 1618425539563,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "27d95e80f1f0bf16",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/166//#testresult/27d95e80f1f0bf16",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618422113729,
+          "stop" : 1618422113729,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "22cafff48bf0f92c",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/165//#testresult/22cafff48bf0f92c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618420998501,
+          "stop" : 1618420998502,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "70396601fe6f478e",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/164//#testresult/70396601fe6f478e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618420859047,
+          "stop" : 1618420859047,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "7a04fb0fd40feca2",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/163//#testresult/7a04fb0fd40feca2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618418763765,
+          "stop" : 1618418763765,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "aea1ac116b38b6f9",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/162//#testresult/aea1ac116b38b6f9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618418626962,
+          "stop" : 1618418626962,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "84af8640f921020",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/156//#testresult/84af8640f921020",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618417220016,
+          "stop" : 1618417220016,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d2211cbd28a0dd36.json",
+  "parameterValues" : [ "False", "'aaab'" ]
+}

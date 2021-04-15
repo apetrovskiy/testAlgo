@@ -1,0 +1,156 @@
+{
+  "uid" : "28272e17791bc4ce",
+  "name" : "test_quick_sorting_2[input_array0-expected_result0]",
+  "fullName" : "src.test.java.testAlgo.stephens.ch06.test_quick_sorting_2#test_quick_sorting_2",
+  "historyId" : "93fe552590a8a4b90270675200dcfec8",
+  "time" : {
+    "start" : 1618469053661,
+    "stop" : 1618469053661,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert [0, 1, 2, 3, 4, 5, ...] == [0, 1, 2, 4, 5, 6, ...]\n  At index 3 diff: 3 != 4\n  Use -v to get the full diff",
+  "statusTrace" : "input_array = [0, 1, 2, 4, 5, 6, ...], expected_result = [0, 1, 2, 3, 4, 5, ...]\n\n    @pytest.mark.parametrize(\"input_array,expected_result\", test_data)\n    def test_quick_sorting_2(input_array: List[int], expected_result: List[int]):\n>       assert expected_result == quick_sorting(input_array)\nE       assert [0, 1, 2, 3, 4, 5, ...] == [0, 1, 2, 4, 5, 6, ...]\nE         At index 3 diff: 3 != 4\nE         Use -v to get the full diff\n\nsrc/test/java/testAlgo/stephens/ch06/test_quick_sorting_2.py:15: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.stephens.ch06"
+  }, {
+    "name" : "suite",
+    "value" : "test_quick_sorting_2"
+  }, {
+    "name" : "host",
+    "value" : "fv-az173-429"
+  }, {
+    "name" : "thread",
+    "value" : "3047-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.stephens.ch06.test_quick_sorting_2"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+  }, {
+    "name" : "input_array",
+    "value" : "[0, 1, 2, 4, 5, 6, 3, 7, 8, 9]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 7,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "ea21cc493acd8737",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/169//#testresult/ea21cc493acd8737",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert [0, 1, 2, 3, 4, 5, ...] == [0, 1, 2, 4, 5, 6, ...]\n  At index 3 diff: 3 != 4\n  Use -v to get the full diff",
+        "time" : {
+          "start" : 1618466888452,
+          "stop" : 1618466888452,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "22729465af25e49",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/168//#testresult/22729465af25e49",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1618425546610,
+          "stop" : 1618425546610,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "4242f40e824c5779",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/166//#testresult/4242f40e824c5779",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1618422119347,
+          "stop" : 1618422119347,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "3f148a85eddb5357",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/165//#testresult/3f148a85eddb5357",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1618421004845,
+          "stop" : 1618421004845,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "4d5a685b02e9f5a1",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/164//#testresult/4d5a685b02e9f5a1",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1618420865334,
+          "stop" : 1618420865334,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "8617d0340e42d679",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/163//#testresult/8617d0340e42d679",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1618418770596,
+          "stop" : 1618418770596,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "e477956c5693b7ed",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/162//#testresult/e477956c5693b7ed",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1618418633450,
+          "stop" : 1618418633450,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "8a9c346171b0a8dd",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/156//#testresult/8a9c346171b0a8dd",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1618417227644,
+          "stop" : 1618417227644,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "28272e17791bc4ce.json",
+  "parameterValues" : [ "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]", "[0, 1, 2, 4, 5, 6, 3, 7, 8, 9]" ]
+}
