@@ -12,7 +12,7 @@ test_data = [
 
 @allure.feature('Stephens')
 @allure.story('Counting sorting')
-@pytest.mark.skip(reason="TODO: no way of currently testing this")
+# @pytest.mark.skip(reason="TODO: no way of currently testing this")
 @pytest.mark.parametrize("input_array,expected_result", test_data)
 def test_counting_sorting_2(input_array: List[int],
                             expected_result: List[int]):
