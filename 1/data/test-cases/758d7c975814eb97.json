@@ -1,0 +1,184 @@
+{
+  "uid" : "758d7c975814eb97",
+  "name" : "test_anagrams[below the car is a rat drinking cider and bending         its elbow while this thing is an arc that can act             like a cat which cried during the night caused                 by pain in its bowel-expected_result0]",
+  "fullName" : "src.test.java.testAlgo.durr_vie.CharacterStrings.Anagrams.test_anagrams#test_anagrams",
+  "historyId" : "77f2129afb186afccbb685065ab77c97",
+  "time" : {
+    "start" : 1618550898917,
+    "stop" : 1618550898917,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Durr Vie"
+  }, {
+    "name" : "story",
+    "value" : "Anagrams"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.durr_vie.CharacterStrings.Anagrams"
+  }, {
+    "name" : "suite",
+    "value" : "test_anagrams"
+  }, {
+    "name" : "host",
+    "value" : "fv-az132-864"
+  }, {
+    "name" : "thread",
+    "value" : "3083-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.durr_vie.CharacterStrings.Anagrams.test_anagrams"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[['bowel', 'below', 'elbow'], ['arc', 'car'], ['night', 'thing'], ['cried', 'cider'], ['act', 'cat']]"
+  }, {
+    "name" : "input",
+    "value" : "'below the car is a rat drinking cider and bending         its elbow while this thing is an arc that can act             like a cat which cried during the night caused                 by pain in its bowel'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 13,
+        "unknown" : 0,
+        "total" : 13
+      },
+      "items" : [ {
+        "uid" : "1b52bb6b3633aa91",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/175//#testresult/1b52bb6b3633aa91",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618550865502,
+          "stop" : 1618550865502,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "e3e23af615fd952c",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/174//#testresult/e3e23af615fd952c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618485437423,
+          "stop" : 1618485437424,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "4a06fd9043f8e341",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/173//#testresult/4a06fd9043f8e341",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618483345932,
+          "stop" : 1618483345932,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "1cfc4878ad1ae572",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/171//#testresult/1cfc4878ad1ae572",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618469047468,
+          "stop" : 1618469047468,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "eb445f2f6b8230cf",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/169//#testresult/eb445f2f6b8230cf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618466882068,
+          "stop" : 1618466882069,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "9c8513545281d675",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/168//#testresult/9c8513545281d675",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618425539554,
+          "stop" : 1618425539555,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "999d44da764e1e69",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/166//#testresult/999d44da764e1e69",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618422113724,
+          "stop" : 1618422113724,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "760dd3d5f20b4dbf",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/165//#testresult/760dd3d5f20b4dbf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618420998494,
+          "stop" : 1618420998495,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "6534082d95f8f3d4",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/164//#testresult/6534082d95f8f3d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618420859039,
+          "stop" : 1618420859040,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "a819803c325a5c56",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/163//#testresult/a819803c325a5c56",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618418763758,
+          "stop" : 1618418763758,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "116455bd2c7a4501",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/162//#testresult/116455bd2c7a4501",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618418626954,
+          "stop" : 1618418626955,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "cafed43cd3a2b412",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/156//#testresult/cafed43cd3a2b412",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618417220007,
+          "stop" : 1618417220008,
+          "duration" : 1
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "758d7c975814eb97.json",
+  "parameterValues" : [ "[['bowel', 'below', 'elbow'], ['arc', 'car'], ['night', 'thing'], ['cried', 'cider'], ['act', 'cat']]", "'below the car is a rat drinking cider and bending         its elbow while this thing is an arc that can act             like a cat which cried during the night caused                 by pain in its bowel'" ]
+}
