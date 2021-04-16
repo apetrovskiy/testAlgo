@@ -8,7 +8,7 @@ test_data = [
 ]
 
 
-# @pytest.mark.skip(reason="TODO: no way of currently testing this")
+@pytest.mark.skip(reason="TODO: no way of currently testing this")
 @pytest.mark.parametrize("input_array,expected_result", test_data)
 def test_shell_sorting(input_array: List[int], expected_result: List[int]):
     assert expected_result == shell_sorting(input_array)
