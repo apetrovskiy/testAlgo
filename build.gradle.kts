@@ -6,6 +6,23 @@
  * User Manual available at https://docs.gradle.org/6.6.1/userguide/tutorial_java_projects.html
  */
 
+val versions = mapOf(
+    "gatling" to "3.5.1",
+    "junit-jupiter" to "5.7.1",
+    "junit-platform" to "1.7.1",
+    "jackson" to "2.12.2",
+    "snakeyaml" to "1.28",
+    "jooq" to "3.14.8",
+    "allure" to "2.13.9",
+    "postgresql" to "42.2.19",
+    "rest-assured" to "4.3.3",
+    "hamcrest" to "2.2",
+    "javafaker" to "1.0.2",
+    "awaitility" to "4.0.3",
+    "cucumber" to "6.8.1",
+    "cucumber-junit" to "6.10.2"
+)
+
 plugins {
     // Apply the java plugin to add support for Java
     java
@@ -18,7 +35,7 @@ plugins {
 
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     // kotlin("multiplatform") version "1.4.10"
-    kotlin("jvm") version "1.4.10"
+    kotlin("jvm") version "1.4.32"
 
     // Apply the scala Plugin to add support for Scala.
     scala
@@ -58,6 +75,7 @@ java {
     }
 }*/
 
+/*
 tasks.withType<JavaCompile>().configureEach {
     javaCompiler.set(javaToolchains.compilerFor {
         languageVersion.set(JavaLanguageVersion.of(11))
@@ -69,6 +87,7 @@ tasks.withType<Test>().configureEach {
         languageVersion.set(JavaLanguageVersion.of(14))
     })
 }
+*/
 
 sourceSets.main {
     java.srcDirs("src/main/java")
@@ -82,6 +101,10 @@ repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+    mavenCentral()
+    /*maven {
+        url = uri("https://mvnrepository.com")
+    }*/
 }
 
 dependencies {
@@ -133,21 +156,23 @@ dependencies {
     // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
-    // https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine
-    testImplementation("org.junit.vintage:junit-vintage-engine:5.7.0")
-
-    // https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner
-    testImplementation("org.junit.platform:junit-platform-runner:1.7.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${versions["junit-jupiter"]}")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:${versions["junit-jupiter"]}")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:${versions["junit-jupiter"]}")
+    testImplementation("org.junit.platform:junit-platform-launcher:${versions["junit-platform"]}")
+    testImplementation("org.junit.platform:junit-platform-runner:${versions["junit-platform"]}")
+    testImplementation("org.junit.platform:junit-platform-engine:${versions["junit-platform"]}")
+    testImplementation("org.junit.platform:junit-platform-suite-api:${versions["junit-platform"]}")
 
     // https://mvnrepository.com/artifact/junit/junit
-    testImplementation("junit:junit:4.13.1")
+    // testImplementation("junit:junit:4.13.1")
 
     // Use the awesome Spock testing and specification framework even with Java
     testImplementation("org.spockframework:spock-core:1.3-groovy-2.5")
     // testImplementation("junit:junit:4.13")
 
     // Use Scalatest for testing our library
-    testImplementation("junit:junit:4.12")
+    // testImplementation("junit:junit:4.12")
     testImplementation("org.scalatest:scalatest_2.13:3.2.0")
     testImplementation("org.scalatestplus:junit-4-12_2.13:3.2.0.0")
     testImplementation("org.scalatest:scalatest-freespec_2.13:3.2.0")
@@ -159,16 +184,17 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    // mainClassName = "testCodi.App"
-    mainClass.set("testCodi.App")
+    // mainClassName = "testLeCo.App"
+    mainClass.set("testLeCo.App")
 }
 
 val test by tasks.getting(Test::class) {
     // Use junit platform for unit tests
     useJUnitPlatform()
+    testLogging.showStandardStreams = true
 }
 
 tasks.named<Wrapper>("wrapper") {
-    gradleVersion = "6.7.1"
+    gradleVersion = "7.0"
     distributionType = Wrapper.DistributionType.ALL
 }
