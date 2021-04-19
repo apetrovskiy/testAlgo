@@ -1200,6 +1200,7 @@ build
 
 allure-reports/*
 allure-results/*
+.nyc_output/*
 *result.json
 *container.json
 

@@ -6,6 +6,8 @@
  * User Manual available at https://docs.gradle.org/6.6.1/userguide/tutorial_java_projects.html
  */
 
+import io.qameta.allure.gradle.AllureExtension
+
 val versions = mapOf(
     "gatling" to "3.5.1",
     "junit-jupiter" to "5.7.1",
@@ -20,7 +22,10 @@ val versions = mapOf(
     "javafaker" to "1.0.2",
     "awaitility" to "4.0.3",
     "cucumber" to "6.8.1",
-    "cucumber-junit" to "6.10.2"
+    "cucumber-junit" to "6.10.2",
+    "allure" to "2.13.9",
+    "allure-gradle" to "2.8.1",
+    "java-version" to "16"
 )
 
 plugins {
@@ -54,6 +59,10 @@ plugins {
 
     // Apply the xctest plugin to add support for building and running Swift test executables (Linux) or bundles (macOS)
     // xctest
+
+    id("io.qameta.allure") version "2.8.1"
+
+    // checkstyle
 }
 
 /*
@@ -68,33 +77,18 @@ library {
 }
 */
 
-/*
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
+        languageVersion.set(JavaLanguageVersion.of(versions["java-version"]!!.toInt()))
     }
-}*/
-
-/*
-tasks.withType<JavaCompile>().configureEach {
-    javaCompiler.set(javaToolchains.compilerFor {
-        languageVersion.set(JavaLanguageVersion.of(11))
-    })
 }
-
-tasks.withType<Test>().configureEach {
-    javaLauncher.set(javaToolchains.launcherFor {
-        languageVersion.set(JavaLanguageVersion.of(14))
-    })
-}
-*/
 
 sourceSets.main {
-    java.srcDirs("src/main/java")
+    java.srcDirs("src/main/java", "src/main/kotlin", "src/main/scala","src/main/groovy")
 }
 
 sourceSets.test {
-    java.srcDirs("src/test/java")
+    java.srcDirs("src/test/java","src/test/kotlin","src/test/scala","src/test/groovy")
 }
 
 repositories {
@@ -180,19 +174,50 @@ dependencies {
 
     // Need scala-xml at test runtime
     testRuntimeOnly("org.scala-lang.modules:scala-xml_2.13:1.2.0")
+
+    testImplementation("io.qameta.allure:allure-java-commons:${versions["allure"]}")
 }
 
-application {
+/*application {
     // Define the main class for the application.
     // mainClassName = "testLeCo.App"
     mainClass.set("testLeCo.App")
+}*/
+
+configure<AllureExtension> {
+    autoconfigure = true
+    aspectjweaver = true
+    version = versions["allure"]
+    allureJavaVersion = versions["java-version"]
+
+    clean = true
+
+    resultsDir = file("../../allure-results")
+    reportDir = file("../../allure-reports")
+
+    useJUnit5 {
+        version = versions["allure"]
+    }
 }
 
 val test by tasks.getting(Test::class) {
+    ignoreFailures = true
     // Use junit platform for unit tests
     useJUnitPlatform()
     testLogging.showStandardStreams = true
+    systemProperty("junit.jupiter.execution.parallel.enabled", "true")
+    systemProperty("junit.jupiter.execution.parallel.config.strategy", "dynamic")
+    systemProperty("junit.jupiter.extensions.autodetection.enabled", "true")
+    // systemProperty("allure.results.directory", "../../allure-results")
 }
+
+/*tasks.withType<Checkstyle>().configureEach {
+    reports {
+        xml.isEnabled = false
+        html.isEnabled = true
+        html.stylesheet = resources.text.fromFile("config/xsl/checkstyle-custom.xsl")
+    }
+}*/
 
 tasks.named<Wrapper>("wrapper") {
     gradleVersion = "7.0"
