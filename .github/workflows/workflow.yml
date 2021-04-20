@@ -11,6 +11,8 @@ jobs:
       matrix:
         # ruby-version: ['2.6', '2.7', '3.0']
         ruby-version: ['2.7']
+        # node-version: [10.x, 12.x, 14.x, 15.x]
+        node-version: [15.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -47,6 +49,12 @@ jobs:
 #       run: |
 #         pylint `ls -R|grep .py$|xargs`
 
+    - name: Experimental installation
+      if: always()
+      run: |
+        rm Gemfile.lock
+        # bundle install
+
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
@@ -56,20 +64,45 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-    # - name: Look at allure
+    # - name: Experimental installation
+    #   if: always()
     #   run: |
-    #     # ls .
-    #     ls allure-results
-    #     # allure --version
+    #     rm Gemfile.lock
+    #     bundle install
 
     - name: Ruby - run tests
+      if: always()
       run: bundle exec rake
 
-    # - name: Look at allure
-    #   run: |
-    #     # ls .
-    #     ls allure-results
-    #     # allure --version
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      if: always()
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      if: always()
+      with:
+        go-version: 1.15
+
+    - name: Go - build
+      if: always()
+      run: |
+        go get github.com/onsi/ginkgo/ginkgo
+        go get github.com/onsi/gomega/...
+        go get -u github.com/dailymotion/allure-go
+        export ALLURE_RESULTS_PATH=allure-results
+        GCO_ENABLED=0
+        go mod vendor
+        go build -v ./...
+
+    - name: Go - test
+      if: always()
+      run: go test -v ./...
 
     - name: Set up JDK 15
       uses: actions/setup-java@v2
@@ -90,12 +123,6 @@ jobs:
       if: always()
       run: ./gradlew build
 
-    # - name: Look at allure
-    #   run: |
-    #     # ls .
-    #     ls allure-results
-    #     # allure --version
-
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       if: always()
@@ -113,12 +140,6 @@ jobs:
     - name: dotnet - test
       if: always()
       run: dotnet test --no-build --verbosity normal
-
-    # - name: Look at allure
-    #   run: |
-    #     # ls .
-    #     ls allure-results
-    #     # allure --version
 
     - name: Get Allure history
       uses: actions/checkout@v2

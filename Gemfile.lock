@@ -49,6 +49,7 @@ GEM
     middleware (0.1.0)
     minitest (5.14.4)
     multi_test (0.1.2)
+    oj (~>3.9)
     power_assert (1.2.0)
     protobuf-cucumber (3.10.8)
       activesupport (>= 3.2)
@@ -90,6 +91,9 @@ DEPENDENCIES
   rake
   rspec
   test-unit
+  oj
+  allure-ruby-commons
+  allure-rspec
 
 BUNDLED WITH
    1.17.2
