@@ -1,0 +1,25 @@
+name: Upload Allure
+description: Allure installation and folders
+runs:
+  using: "composite"
+  steps:
+    - name: Archive Allure results
+      run: actions/upload-artifact@v2
+      # with:
+      #   name: allure-results
+      #   path: allure-results
+    # - uses: actions/upload-artifact@v2
+    #   with:
+    #     name: allure-results
+    #     path: allure-results
+    # - name: Archive Allure reports
+    #   if: always()
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: allure-reports
+    #     path: allure-reports
+
+      shell: bash
+
+
+

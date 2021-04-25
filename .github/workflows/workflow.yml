@@ -47,10 +47,6 @@ jobs:
     - name: Look at Allure
       if: always()
       uses: ./.github/actions/allure-show
-    
-    - name: Probe
-      if: always()
-      uses: ./.github/actions/aaaa
 
     # TODO: de-duplicate
     - name: Archive Allure results
@@ -59,12 +55,16 @@ jobs:
       with:
         name: allure-results
         path: allure-results
-    - name: Archive Allure reports
+    # - name: Archive Allure reports
+    #   if: always()
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: allure-reports
+    #     path: allure-reports
+
+    - name: Allure upload experimental
       if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: allure-reports
-        path: allure-reports
+      uses: ./.github/actions/allure-upload
 
   ruby:
     runs-on: ubuntu-latest
@@ -114,12 +114,12 @@ jobs:
       with:
         name: allure-results
         path: allure-results
-    - name: Archive Allure reports
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: allure-reports
-        path: allure-reports
+    # - name: Archive Allure reports
+    #   if: always()
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: allure-reports
+    #     path: allure-reports
 
   node:
     runs-on: ubuntu-latest
@@ -151,12 +151,12 @@ jobs:
       with:
         name: allure-results
         path: allure-results
-    - name: Archive Allure reports
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: allure-reports
-        path: allure-reports
+    # - name: Archive Allure reports
+    #   if: always()
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: allure-reports
+    #     path: allure-reports
 
   golang:
     runs-on: ubuntu-latest
@@ -196,12 +196,12 @@ jobs:
       with:
         name: allure-results
         path: allure-results
-    - name: Archive Allure reports
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: allure-reports
-        path: allure-reports
+    # - name: Archive Allure reports
+    #   if: always()
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: allure-reports
+    #     path: allure-reports
 
   jdk:
     runs-on: ubuntu-latest
@@ -245,12 +245,12 @@ jobs:
       with:
         name: allure-results
         path: allure-results
-    - name: Archive Allure reports
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: allure-reports
-        path: allure-reports
+    # - name: Archive Allure reports
+    #   if: always()
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: allure-reports
+    #     path: allure-reports
 
   dotnet-format:
     runs-on: ubuntu-latest
@@ -310,12 +310,22 @@ jobs:
       with:
         name: allure-results
         path: allure-results
-    - name: Archive Allure reports
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: allure-reports
-        path: allure-reports
+    # - name: Archive Allure reports
+    #   if: always()
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: allure-reports
+    #     path: allure-reports
+
+  swift:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: swift build -v
+    - name: Run tests
+      run: swift test -v
 
   allure:
     runs-on: ubuntu-latest
@@ -328,6 +338,7 @@ jobs:
       - golang
       - jdk
       - dotnet
+      - swift
     steps:
 
     - name: Download all workflow run artifacts
@@ -382,15 +393,3 @@ jobs:
   #       uses: xt0rted/dotnet-format@v1
   #       with:
   #         repo-token: ${{ secrets.GITHUB_TOKEN }}
-
-  # action: zzz
-  #   - uses: actions/upload-artifact@v2
-  #     with:
-  #       name: allure-results
-  #       path: allure-results
-    # - name: Archive Allure reports
-    #   if: always()
-    #   uses: actions/upload-artifact@v2
-    #   with:
-    #     name: allure-reports
-    #     path: allure-reports
