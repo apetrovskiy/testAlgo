@@ -341,17 +341,6 @@ jobs:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v2
 
-    - name: List actions # temporarily
-      if: always()
-      run: |
-        ls .github -l
-        ls .github/actions -l
-        ls .github/actions/allure-show
-
-    - name: Look at Allure
-      if: always()
-      uses: ./.github/actions/allure-show
-
     - name: Get Allure history
       uses: actions/checkout@v2
       if: always()
@@ -362,6 +351,7 @@ jobs:
 
     - name: Allure Report with history
       uses: simple-elf/allure-report-action@v1.5
+      if: always()
 
     - name: Allure Report action from marketplace
       uses: simple-elf/allure-report-action@master
