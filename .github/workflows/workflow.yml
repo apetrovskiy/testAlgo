@@ -46,7 +46,7 @@ jobs:
 
     - name: look at
       if: always()
-      uses: ./.github/actions/allure-prep
+      uses: ./.github/actions/allure-show
       # with: ./.github/actions/allure-prep
 
     # # TODO: de-duplicate
