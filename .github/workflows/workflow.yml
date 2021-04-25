@@ -44,12 +44,17 @@ jobs:
 #       run: |
 #         pylint `ls -R|grep .py$|xargs`
 
-    # TODO: de-duplicate
-    - name: Look at allure
+    - name: look at
       if: always()
-      run: |
-        ls allure-results
-        # allure --version
+      uses: ./.github/actions/allure-prep
+      # with: ./.github/actions/allure-prep
+
+    # # TODO: de-duplicate
+    # - name: Look at allure
+    #   if: always()
+    #   run: |
+    #     ls allure-results
+    #     # allure --version
 
     # TODO: de-duplicate
     - name: Archive Allure results
