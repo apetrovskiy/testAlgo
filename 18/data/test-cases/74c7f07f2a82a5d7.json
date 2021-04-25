@@ -1,0 +1,256 @@
+{
+  "uid" : "74c7f07f2a82a5d7",
+  "name" : "test_anagrams[below the car is a rat drinking cider and bending         its elbow while this thing is an arc that can act             like a cat which cried during the night caused                 by pain in its bowel-expected_result0]",
+  "fullName" : "src.test.java.testAlgo.durr_vie.CharacterStrings.Anagrams.test_anagrams#test_anagrams",
+  "historyId" : "77f2129afb186afccbb685065ab77c97",
+  "time" : {
+    "start" : 1619380458572,
+    "stop" : 1619380458573,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Anagrams"
+  }, {
+    "name" : "feature",
+    "value" : "Durr Vie"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.durr_vie.CharacterStrings.Anagrams"
+  }, {
+    "name" : "suite",
+    "value" : "test_anagrams"
+  }, {
+    "name" : "host",
+    "value" : "fv-az199-704"
+  }, {
+    "name" : "thread",
+    "value" : "2129-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.durr_vie.CharacterStrings.Anagrams.test_anagrams"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[['bowel', 'below', 'elbow'], ['arc', 'car'], ['night', 'thing'], ['cried', 'cider'], ['act', 'cat']]"
+  }, {
+    "name" : "input",
+    "value" : "'below the car is a rat drinking cider and bending         its elbow while this thing is an arc that can act             like a cat which cried during the night caused                 by pain in its bowel'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 30,
+        "unknown" : 0,
+        "total" : 30
+      },
+      "items" : [ {
+        "uid" : "2966b753cc92fc33",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/17//#testresult/2966b753cc92fc33",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619358370715,
+          "stop" : 1619358370716,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "711c255662ef681d",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/16//#testresult/711c255662ef681d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619358188259,
+          "stop" : 1619358188260,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "a240e9ae67664898",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/15//#testresult/a240e9ae67664898",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619354442534,
+          "stop" : 1619354442535,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "163aff5c9b6ed487",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/14//#testresult/163aff5c9b6ed487",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619351598266,
+          "stop" : 1619351598267,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "38026676dc9a0145",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/13//#testresult/38026676dc9a0145",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619351329254,
+          "stop" : 1619351329255,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "ff72a55758fd331a",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/12//#testresult/ff72a55758fd331a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619350794635,
+          "stop" : 1619350794635,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "a6ed2025aa257135",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/11//#testresult/a6ed2025aa257135",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619348670899,
+          "stop" : 1619348670899,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "d472ea6b227284b9",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/10//#testresult/d472ea6b227284b9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619265750888,
+          "stop" : 1619265750888,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "fb2a4199d6025aa0",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/9//#testresult/fb2a4199d6025aa0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618942293391,
+          "stop" : 1618942293391,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "e373813f2f24a82a",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/8//#testresult/e373813f2f24a82a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618941914115,
+          "stop" : 1618941914115,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "f59566e2ef0959e9",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/7//#testresult/f59566e2ef0959e9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618931441558,
+          "stop" : 1618931441558,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "18a45420e45cc687",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/6//#testresult/18a45420e45cc687",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618931271174,
+          "stop" : 1618931271174,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "f859bc6879750461",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/5//#testresult/f859bc6879750461",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618849370370,
+          "stop" : 1618849370370,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "9e2f362a3a05206",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/4//#testresult/9e2f362a3a05206",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618848553571,
+          "stop" : 1618848553571,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "5390115c8fceabfe",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/3//#testresult/5390115c8fceabfe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618611820841,
+          "stop" : 1618611820841,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "d915f6479841cd14",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/2//#testresult/d915f6479841cd14",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618551280474,
+          "stop" : 1618551280474,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "758d7c975814eb97",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/1//#testresult/758d7c975814eb97",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618550898917,
+          "stop" : 1618550898917,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "1b52bb6b3633aa91",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/175//#testresult/1b52bb6b3633aa91",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618550865502,
+          "stop" : 1618550865502,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "e3e23af615fd952c",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/174//#testresult/e3e23af615fd952c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618485437423,
+          "stop" : 1618485437424,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "4a06fd9043f8e341",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/173//#testresult/4a06fd9043f8e341",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618483345932,
+          "stop" : 1618483345932,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "74c7f07f2a82a5d7.json",
+  "parameterValues" : [ "[['bowel', 'below', 'elbow'], ['arc', 'car'], ['night', 'thing'], ['cried', 'cider'], ['act', 'cat']]", "'below the car is a rat drinking cider and bending         its elbow while this thing is an arc that can act             like a cat which cried during the night caused                 by pain in its bowel'" ]
+}
