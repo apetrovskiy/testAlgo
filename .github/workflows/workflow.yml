@@ -44,17 +44,9 @@ jobs:
 #       run: |
 #         pylint `ls -R|grep .py$|xargs`
 
-    - name: look at
+    - name: Look at Allure
       if: always()
       uses: ./.github/actions/allure-show
-      # with: ./.github/actions/allure-prep
-
-    # # TODO: de-duplicate
-    # - name: Look at allure
-    #   if: always()
-    #   run: |
-    #     ls allure-results
-    #     # allure --version
 
     # TODO: de-duplicate
     - name: Archive Allure results
@@ -107,12 +99,9 @@ jobs:
       if: always()
       run: bundle exec rake
 
-    # TODO: de-duplicate
-    - name: Look at allure
+    - name: Look at Allure
       if: always()
-      run: |
-        ls allure-results
-        # allure --version
+      uses: ./.github/actions/allure-show
 
     # TODO: de-duplicate
     - name: Archive Allure results
@@ -147,12 +136,9 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
 
-    # TODO: de-duplicate
-    - name: Look at allure
+    - name: Look at Allure
       if: always()
-      run: |
-        ls allure-results
-        # allure --version
+      uses: ./.github/actions/allure-show
 
     # TODO: de-duplicate
     - name: Archive Allure results
@@ -195,12 +181,9 @@ jobs:
       if: always()
       run: go test -v ./...
 
-    # TODO: de-duplicate
-    - name: Look at allure
+    - name: Look at Allure
       if: always()
-      run: |
-        ls allure-results
-        # allure --version
+      uses: ./.github/actions/allure-show
 
     # TODO: de-duplicate
     - name: Archive Allure results
@@ -247,12 +230,9 @@ jobs:
       if: always()
       run: ./gradlew build
 
-    # TODO: de-duplicate
-    - name: Look at allure
+    - name: Look at Allure
       if: always()
-      run: |
-        ls allure-results
-        # allure --version
+      uses: ./.github/actions/allure-show
 
     # TODO: de-duplicate
     - name: Archive Allure results
@@ -315,12 +295,9 @@ jobs:
       if: always()
       run: dotnet test --no-build --verbosity normal
 
-    # TODO: de-duplicate
-    - name: Look at allure
+    - name: Look at Allure
       if: always()
-      run: |
-        ls allure-results
-        # allure --version
+      uses: ./.github/actions/allure-show
 
     # TODO: de-duplicate
     - name: Archive Allure results
@@ -352,11 +329,9 @@ jobs:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v2
 
-    - name: Look at allure
+    - name: Look at Allure
       if: always()
-      run: |
-        ls allure-results
-        # allure --version
+      uses: ./.github/actions/allure-show
 
     - name: Get Allure history
       uses: actions/checkout@v2
