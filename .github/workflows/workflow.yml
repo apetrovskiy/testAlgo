@@ -341,6 +341,13 @@ jobs:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v2
 
+    - name: List actions # temporarily
+      if: always()
+      run: |
+        ls .github -l
+        ls .github/actions -l
+        ls .github/actions/allure-show
+
     - name: Look at Allure
       if: always()
       uses: ./.github/actions/allure-show
