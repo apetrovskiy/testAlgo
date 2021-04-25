@@ -4,6 +4,6 @@ runs:
   using: "composite"
   steps:
     - run: |
-        allure --version
         ls allure-results
+        # allure --version
       shell: bash
