@@ -47,6 +47,10 @@ jobs:
     - name: Look at Allure
       if: always()
       uses: ./.github/actions/allure-show
+    
+    - name: Probe
+      if: always()
+      uses: ./.github/actions/aaaa
 
     # TODO: de-duplicate
     - name: Archive Allure results
@@ -378,3 +382,15 @@ jobs:
   #       uses: xt0rted/dotnet-format@v1
   #       with:
   #         repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+  # action: zzz
+  #   - uses: actions/upload-artifact@v2
+  #     with:
+  #       name: allure-results
+  #       path: allure-results
+    # - name: Archive Allure reports
+    #   if: always()
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: allure-reports
+    #     path: allure-reports
