@@ -6,8 +6,9 @@ from src.main.java.testAlgo.fox.lesson011.towers import move
 test_data = [
     (3, 1, 3, 2),
     (4, 1, 3, 2),
-    (5, 1, 3, 2),
-    (20, 1, 3, 2)
+    (5, 1, 3, 2)  # ,
+    # TODO
+    # (20, 1, 3, 2)
 ]
 
 
