@@ -1,4 +1,4 @@
-name: name: Python 3.9, Ruby 2.7, Java 15, .NET 5, Go 1.16, Swift, Dart, allure
+name: Python 3.9, Ruby 2.7, Java 15, .NET 5, Go 1.16, Swift, Dart, allure
 
 on: [push]
 
