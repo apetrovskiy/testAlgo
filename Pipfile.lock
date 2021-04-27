@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b9b54d54ec0ca47eeada288749e9763a03add6286f454892ecb46036a6d89ff8"
+            "sha256": "b342a4b3f883b3aaab54eddaf579046aa3ea7879689078f9ccd85af42486533e"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,10 +16,26 @@
         ]
     },
     "default": {
+        "allure-behave": {
+            "hashes": [
+                "sha256:099ac64ea59ec38f05fea2cbae56c1e01813ff7a7b36e4e88de412e77e34be17",
+                "sha256:d978aea3a1b555c1e831ea9ea95e67b8982a0b29308506e3bcf9b2adaf35708d"
+            ],
+            "index": "pypi",
+            "version": "==2.8.40"
+        },
         "allure-pytest": {
             "hashes": [
                 "sha256:5e05cefa3259aa3022b907b61dd41dcb32d317370e0c36a2c555fa98a96df654",
                 "sha256:618f3e71f31d354c02402b1b5ad8aa04521262dc3d86aa85b91ff59411586936"
+            ],
+            "index": "pypi",
+            "version": "==2.8.40"
+        },
+        "allure-pytest-bdd": {
+            "hashes": [
+                "sha256:52ca024217d3a12199d4733dc137febb054febadc95f449defb72c058e65387a",
+                "sha256:578f7230938cff956c346466cb177558cce7040c0c8fa3b4cde5e94d96ef7960"
             ],
             "index": "pypi",
             "version": "==2.8.40"
@@ -428,6 +444,13 @@
             ],
             "index": "pypi",
             "version": "==6.2.1"
+        },
+        "pytest-bdd": {
+            "hashes": [
+                "sha256:74ea5a147ea558c99ae83d838e6acbe5c9e6843884a958f8231615d96838733d",
+                "sha256:982489f2f036c7561affe4eeb5b392a37e1ace2a9f260cad747b1c8119e63cfd"
+            ],
+            "version": "==4.0.2"
         },
         "pytest-forked": {
             "hashes": [
