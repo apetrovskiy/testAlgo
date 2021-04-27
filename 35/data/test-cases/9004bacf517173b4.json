@@ -1,0 +1,281 @@
+{
+  "uid" : "9004bacf517173b4",
+  "name" : "test_text_on_9_keys[2665687-bonjour]",
+  "fullName" : "src.test.java.testAlgo.durr_vie.CharacterStrings.TextOn9Keys.test_text_on_9_keys#test_text_on_9_keys",
+  "historyId" : "8f9277ccab8c358eb5ae9bfc87c07841",
+  "time" : {
+    "start" : 1619535517312,
+    "stop" : 1619535517312,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "Skipped: TODO: no way of currently testing this",
+  "statusTrace" : "('/home/runner/work/testAlgo/testAlgo/src/test/java/testAlgo/durr_vie/CharacterStrings/TextOn9Keys/test_text_on_9_keys.py', 10, 'Skipped: TODO: no way of currently testing this')",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Durr Vie"
+  }, {
+    "name" : "story",
+    "value" : "T9"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.skip(reason='TODO: no way of currently testing this')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.durr_vie.CharacterStrings.TextOn9Keys"
+  }, {
+    "name" : "suite",
+    "value" : "test_text_on_9_keys"
+  }, {
+    "name" : "host",
+    "value" : "fv-az278-901"
+  }, {
+    "name" : "thread",
+    "value" : "1883-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.durr_vie.CharacterStrings.TextOn9Keys.test_text_on_9_keys"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "'bonjour'"
+  }, {
+    "name" : "input",
+    "value" : "2665687"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 6,
+        "broken" : 0,
+        "skipped" : 37,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 43
+      },
+      "items" : [ {
+        "uid" : "7fdfa3974059c9b5",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/33//#testresult/7fdfa3974059c9b5",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619534810242,
+          "stop" : 1619534810242,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "9a63f72001e039e1",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/30//#testresult/9a63f72001e039e1",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619534411677,
+          "stop" : 1619534411677,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "bfa03287b72080c2",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/31//#testresult/bfa03287b72080c2",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619534462628,
+          "stop" : 1619534462628,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "c162b14e0c51a08e",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/29//#testresult/c162b14e0c51a08e",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619534361011,
+          "stop" : 1619534361011,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "238a2437d51b3655",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/28//#testresult/238a2437d51b3655",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619533966707,
+          "stop" : 1619533966707,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "a672cbb37a4c70a",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/25//#testresult/a672cbb37a4c70a",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619533599677,
+          "stop" : 1619533599677,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "d024c357432de99a",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/24//#testresult/d024c357432de99a",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619533473665,
+          "stop" : 1619533473665,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "47ed1e9e9350bb2b",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/23//#testresult/47ed1e9e9350bb2b",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619533206581,
+          "stop" : 1619533206581,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "42a494e0069af5c3",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/22//#testresult/42a494e0069af5c3",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619385105898,
+          "stop" : 1619385105898,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "8eca1c02112d35d5",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/21//#testresult/8eca1c02112d35d5",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619384796228,
+          "stop" : 1619384796228,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "f2d0bc6d5eed85cf",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/20//#testresult/f2d0bc6d5eed85cf",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619381891224,
+          "stop" : 1619381891224,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "cebab94193b609cd",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/19//#testresult/cebab94193b609cd",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619381853176,
+          "stop" : 1619381853176,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "f7b1b0b9f768db39",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/18//#testresult/f7b1b0b9f768db39",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619380458575,
+          "stop" : 1619380458575,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "253550e0cee7b07c",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/17//#testresult/253550e0cee7b07c",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619358370718,
+          "stop" : 1619358370718,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "eb85f0e6ebeb0327",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/16//#testresult/eb85f0e6ebeb0327",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619358188261,
+          "stop" : 1619358188261,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "377b191446bc1b65",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/15//#testresult/377b191446bc1b65",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619354442536,
+          "stop" : 1619354442536,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "b07da967439566f9",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/14//#testresult/b07da967439566f9",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619351598268,
+          "stop" : 1619351598268,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "590ec275876b41e",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/13//#testresult/590ec275876b41e",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619351329257,
+          "stop" : 1619351329257,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "2043aefb4b2b2dbd",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/12//#testresult/2043aefb4b2b2dbd",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619350794637,
+          "stop" : 1619350794637,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "c4cc786a6284879a",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/11//#testresult/c4cc786a6284879a",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1619348670901,
+          "stop" : 1619348670901,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.skip(reason='TODO: no way of currently testing this')" ]
+  },
+  "source" : "9004bacf517173b4.json",
+  "parameterValues" : [ "'bonjour'", "2665687" ]
+}
