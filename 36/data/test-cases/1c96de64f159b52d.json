@@ -1,0 +1,46 @@
+{
+  "uid" : "1c96de64f159b52d",
+  "name" : "Equality case",
+  "fullName" : "src/test/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest.test.js.Equality case",
+  "historyId" : "12496283ee99e7e3275a5e2e6695a035",
+  "time" : {
+    "start" : 1619804742794,
+    "stop" : 1619804742796,
+    "duration" : 2
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "src/test/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest.test.js"
+  }, {
+    "name" : "testClass",
+    "value" : "src/test/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest.test.js"
+  }, {
+    "name" : "testMethod",
+    "value" : "Equality case"
+  }, {
+    "name" : "package",
+    "value" : "src/test/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest.test.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1c96de64f159b52d.json",
+  "parameterValues" : [ ]
+}
