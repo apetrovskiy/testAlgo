@@ -1,7 +1,8 @@
     module.exports = {
-        modulePaths: ['src/'],
+        modulePaths: ["src/"],
         verbose: true,
-        testPathIgnorePatterns: ['fixtures'],
+        testPathIgnorePatterns: ["fixtures"],
         globals: {},
-        setupFilesAfterEnv: ["./allure-report.ts"],
-    }
+        setupFilesAfterEnv: ["jest-allure/dist/setup"],
+        reporters: ["default", "jest-allure"],
+    };

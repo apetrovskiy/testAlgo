@@ -135,6 +135,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    # - run: find -name '*.test.js' | while read test ; do echo $test ; npm test $test ; done
 
     - name: Look at Allure
       if: always()
@@ -175,6 +176,12 @@ jobs:
         export ALLURE_RESULTS_PATH=allure-results
         GCO_ENABLED=0
         go mod vendor
+
+        echo "GOPATH"
+        echo $GOPATH
+        echo "GOROOT"
+        echo $GOROOT
+
         go build -v ./...
 
     - name: Test
@@ -364,19 +371,24 @@ jobs:
     # package:test for this step to succeed. Note that Flutter projects will
     # want to change this to 'flutter test'.
     - name: Run tests
-      run: dart test
-
-    - name: Look at Allure
+      # run: dart test
       if: always()
-      uses: ./.github/actions/allure-show
+      # run: find -name '*_test.dart' | { read test; echo $test; pub run test $test; }
+      # run: find -name '*_test.dart' | while read test ; do echo $test ; pub run test $test ; done
+      run: find -name '*_test.dart' | while read test ; do echo $test ; dart run test $test ; done
 
-    # TODO: de-duplicate
-    - name: Archive Allure results
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: allure-results
-        path: allure-results
+    # Allure is not yet supported
+    # - name: Look at Allure
+    #   if: always()
+    #   uses: ./.github/actions/allure-show
+
+    # # TODO: de-duplicate
+    # - name: Archive Allure results
+    #   if: always()
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: allure-results
+    #     path: allure-results
 
   allure:
     runs-on: ubuntu-latest
@@ -390,6 +402,7 @@ jobs:
       - jdk
       - dotnet
       - swift
+      - dart
     steps:
 
     - name: Download all workflow run artifacts

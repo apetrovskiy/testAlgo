@@ -1,0 +1,6 @@
+{
+ "name": "Dart: Run all Tests",
+ "request": "launch",
+ "type": "dart",
+ "program": "./test/"
+}
