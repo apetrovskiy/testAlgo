@@ -135,6 +135,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    # - run: find -name '*.test.js' | while read test ; do echo $test ; npm test $test ; done
 
     - name: Look at Allure
       if: always()
@@ -175,6 +176,12 @@ jobs:
         export ALLURE_RESULTS_PATH=allure-results
         GCO_ENABLED=0
         go mod vendor
+
+        echo "GOPATH"
+        echo $GOPATH
+        echo "GOROOT"
+        echo $GOROOT
+
         go build -v ./...
 
     - name: Test
@@ -324,35 +331,64 @@ jobs:
     - name: Run tests
       run: swift test -v
 
+    - name: Look at Allure
+      if: always()
+      uses: ./.github/actions/allure-show
+
+    # TODO: de-duplicate
+    - name: Archive Allure results
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: allure-results
+        path: allure-results
+
   dart:
     runs-on: ubuntu-latest
     needs: build
 
     steps:
-      - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      # Note: This workflow uses the latest stable version of the Dart SDK.
-      # You can specify other versions if desired, see documentation here:
-      # https://github.com/dart-lang/setup-dart/blob/main/README.md
-      # - uses: dart-lang/setup-dart@v1
-      - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
+    # Note: This workflow uses the latest stable version of the Dart SDK.
+    # You can specify other versions if desired, see documentation here:
+    # https://github.com/dart-lang/setup-dart/blob/main/README.md
+    # - uses: dart-lang/setup-dart@v1
+    - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
 
-      - name: Install dependencies
-        run: dart pub get
+    - name: Install dependencies
+      run: dart pub get
 
-      # Uncomment this step to verify the use of 'dart format' on each commit.
-      # - name: Verify formatting
-      #   run: dart format --output=none --set-exit-if-changed .
+    # Uncomment this step to verify the use of 'dart format' on each commit.
+    # - name: Verify formatting
+    #   run: dart format --output=none --set-exit-if-changed .
 
-      # Consider passing '--fatal-infos' for slightly stricter analysis.
-      - name: Analyze project source
-        run: dart analyze
+    # Consider passing '--fatal-infos' for slightly stricter analysis.
+    - name: Analyze project source
+      run: dart analyze
 
-      # Your project will need to have tests in test/ and a dependency on
-      # package:test for this step to succeed. Note that Flutter projects will
-      # want to change this to 'flutter test'.
-      - name: Run tests
-        run: dart test
+    # Your project will need to have tests in test/ and a dependency on
+    # package:test for this step to succeed. Note that Flutter projects will
+    # want to change this to 'flutter test'.
+    - name: Run tests
+      # run: dart test
+      if: always()
+      # run: find -name '*_test.dart' | { read test; echo $test; pub run test $test; }
+      # run: find -name '*_test.dart' | while read test ; do echo $test ; pub run test $test ; done
+      run: find -name '*_test.dart' | while read test ; do echo $test ; dart run test $test ; done
+
+    # Allure is not yet supported
+    # - name: Look at Allure
+    #   if: always()
+    #   uses: ./.github/actions/allure-show
+
+    # # TODO: de-duplicate
+    # - name: Archive Allure results
+    #   if: always()
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: allure-results
+    #     path: allure-results
 
   allure:
     runs-on: ubuntu-latest
@@ -366,6 +402,7 @@ jobs:
       - jdk
       - dotnet
       - swift
+      - dart
     steps:
 
     - name: Download all workflow run artifacts
