@@ -25,7 +25,8 @@ val versions = mapOf(
     "cucumber-junit" to "6.10.2",
     "allure" to "2.13.9",
     "allure-gradle" to "2.8.1",
-    "java-version" to "16"
+    "java-version" to "16",
+    "ktlint" to "0.41.0"
 )
 
 plugins {
@@ -63,6 +64,8 @@ plugins {
     id("io.qameta.allure") version "2.8.1"
 
     // checkstyle
+
+    id("org.jlleitschuh.gradle.ktlint") version ("10.0.0")
 }
 
 /*
@@ -84,11 +87,11 @@ java {
 }
 
 sourceSets.main {
-    java.srcDirs("src/main/java", "src/main/kotlin", "src/main/scala","src/main/groovy")
+    java.srcDirs("src/main/java", "src/main/kotlin", "src/main/scala", "src/main/groovy")
 }
 
 sourceSets.test {
-    java.srcDirs("src/test/java","src/test/kotlin","src/test/scala","src/test/groovy")
+    java.srcDirs("src/test/java", "src/test/kotlin", "src/test/scala", "src/test/groovy")
 }
 
 repositories {
@@ -139,7 +142,6 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.7.0")
-    
 
     // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test
     // testImplementation("org.jetbrains.kotlin:kotlin-test:1.4.20")
@@ -176,6 +178,10 @@ dependencies {
     testRuntimeOnly("org.scala-lang.modules:scala-xml_2.13:1.2.0")
 
     testImplementation("io.qameta.allure:allure-java-commons:${versions["allure"]}")
+
+    runtimeOnly("com.pinterest.ktlint:ktlint-core:${versions["ktlint"]}")
+    runtimeOnly("com.pinterest.ktlint:ktlint-ruleset-standard:${versions["ktlint"]}")
+    runtimeOnly("com.pinterest.ktlint:ktlint-reporter-plain:${versions["ktlint"]}")
 }
 
 /*application {
