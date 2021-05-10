@@ -8,26 +8,6 @@
 
 import io.qameta.allure.gradle.AllureExtension
 
-val versions = mapOf(
-    "gatling" to "3.5.1",
-    "junit-jupiter" to "5.7.1",
-    "junit-platform" to "1.7.1",
-    "jackson" to "2.12.2",
-    "snakeyaml" to "1.28",
-    "jooq" to "3.14.8",
-    "allure" to "2.13.9",
-    "postgresql" to "42.2.19",
-    "rest-assured" to "4.3.3",
-    "hamcrest" to "2.2",
-    "javafaker" to "1.0.2",
-    "awaitility" to "4.0.3",
-    "cucumber" to "6.8.1",
-    "cucumber-junit" to "6.10.2",
-    "allure" to "2.13.9",
-    "allure-gradle" to "2.8.1",
-    "java-version" to "16"
-)
-
 plugins {
     // Apply the java plugin to add support for Java
     java
@@ -39,7 +19,7 @@ plugins {
     application
 
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
-    // kotlin("multiplatform") version "1.4.10"
+    // kotlin("multiplatform") version "1.5.0"
     kotlin("jvm") version "1.4.32"
 
     // Apply the scala Plugin to add support for Scala.
@@ -63,6 +43,8 @@ plugins {
     id("io.qameta.allure") version "2.8.1"
 
     // checkstyle
+    pmd
+    id("org.jlleitschuh.gradle.ktlint") version ("10.0.0")
 }
 
 /*
@@ -77,24 +59,28 @@ library {
 }
 */
 
+// TODO: check which one is legacy
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(versions["java-version"]!!.toInt()))
+        languageVersion.set(JavaLanguageVersion.of(Version.JAVA.id.toInt()))
     }
+}
+tasks.compileJava {
+    options.release.set(Version.JAVA.id.toInt())
 }
 
 sourceSets.main {
-    java.srcDirs("src/main/java", "src/main/kotlin", "src/main/scala","src/main/groovy")
+    java.srcDirs("src/main/java", "src/main/kotlin", "src/main/scala", "src/main/groovy")
 }
 
 sourceSets.test {
-    java.srcDirs("src/test/java","src/test/kotlin","src/test/scala","src/test/groovy")
+    java.srcDirs("src/test/java", "src/test/kotlin", "src/test/scala", "src/test/groovy")
 }
 
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    // jcenter()
     mavenCentral()
     /*maven {
         url = uri("https://mvnrepository.com")
@@ -103,7 +89,7 @@ repositories {
 
 dependencies {
     // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
-    // implementation("org.jetbrains.kotlin:kotlin-stdlib:1.4.20")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:${Version.KOTLIN.id}")
 
     // Align versions of all Kotlin components
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
@@ -127,68 +113,69 @@ dependencies {
     // Use the latest Groovy version for building this library
     implementation("org.codehaus.groovy:groovy-all:2.5.12")
 
-    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
-    testImplementation("org.junit.jupiter:junit-jupiter:5.7.0")
-
-    // Use JUnit Jupiter API for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
-
-    // Use JUnit Jupiter Engine for testing.
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
-    // testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
-
-    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
-    testImplementation("org.junit.jupiter:junit-jupiter-params:5.7.0")
-    
-
-    // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test
-    // testImplementation("org.jetbrains.kotlin:kotlin-test:1.4.20")
-
     // Use the Kotlin test library.
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:${Version.KOTLIN.id}")
 
     // Use the Kotlin JUnit integration.
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:${Version.KOTLIN.id}")
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${versions["junit-jupiter"]}")
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:${versions["junit-jupiter"]}")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:${versions["junit-jupiter"]}")
-    testImplementation("org.junit.platform:junit-platform-launcher:${versions["junit-platform"]}")
-    testImplementation("org.junit.platform:junit-platform-runner:${versions["junit-platform"]}")
-    testImplementation("org.junit.platform:junit-platform-engine:${versions["junit-platform"]}")
-    testImplementation("org.junit.platform:junit-platform-suite-api:${versions["junit-platform"]}")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${Version.JUNIT_JUPITER.id}")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:${Version.JUNIT_JUPITER.id}")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:${Version.JUNIT_JUPITER.id}")
+    testImplementation("org.junit.vintage:junit-vintage-engine:${Version.JUNIT_JUPITER.id}")
+    testImplementation("org.junit.platform:junit-platform-launcher:${Version.JUNIT_PLATFORM.id}")
+    testImplementation("org.junit.platform:junit-platform-runner:${Version.JUNIT_PLATFORM.id}")
+    testImplementation("org.junit.platform:junit-platform-engine:${Version.JUNIT_PLATFORM.id}")
+    testImplementation("org.junit.platform:junit-platform-suite-api:${Version.JUNIT_PLATFORM.id}")
 
-    // https://mvnrepository.com/artifact/junit/junit
-    // testImplementation("junit:junit:4.13.1")
+    implementation("io.cucumber:cucumber-core:${Version.CUCUMBER.id}")
+    implementation("io.cucumber:cucumber-java:${Version.CUCUMBER.id}")
+    implementation("io.cucumber:cucumber-gherkin:${Version.CUCUMBER.id}")
+    implementation("io.cucumber:gherkin:18.1.0")
+
+    testImplementation("io.cucumber:cucumber-junit:${Version.CUCUMBER.id}")
+    implementation("io.cucumber:cucumber-junit-platform-engine:${Version.CUCUMBER.id}")
+    implementation("io.cucumber:cucumber-java8:${Version.CUCUMBER.id}")
 
     // Use the awesome Spock testing and specification framework even with Java
     testImplementation("org.spockframework:spock-core:1.3-groovy-2.5")
-    // testImplementation("junit:junit:4.13")
+    testImplementation("junit:junit:${Version.JUNIT4.id}")
 
     // Use Scalatest for testing our library
     // testImplementation("junit:junit:4.12")
-    testImplementation("org.scalatest:scalatest_2.13:3.2.0")
-    testImplementation("org.scalatestplus:junit-4-12_2.13:3.2.0.0")
-    testImplementation("org.scalatest:scalatest-freespec_2.13:3.2.0")
-    testImplementation("org.scalatest:scalatest-funsuite_2.13:3.2.0")
+    testImplementation("org.scalatest:scalatest_2.13:${Version.SCALA_TEST.id}")
+    testImplementation("org.scalatestplus:junit-4-12_2.13:${Version.SCALA_TEST_PLUS.id}")
+    testImplementation("org.scalatest:scalatest-freespec_2.13:${Version.SCALA_TEST.id}")
+    testImplementation("org.scalatest:scalatest-funsuite_2.13:${Version.SCALA_TEST.id}")
 
     // Need scala-xml at test runtime
     testRuntimeOnly("org.scala-lang.modules:scala-xml_2.13:1.2.0")
 
-    testImplementation("io.qameta.allure:allure-java-commons:${versions["allure"]}")
+    // testImplementation("io.qameta.allure:allure-java-commons:${Version.ALLURE.id}")
+    implementation("io.qameta.allure:allure-java-commons:${Version.ALLURE.id}")
+    implementation("io.qameta.allure:allure-cucumber6-jvm:${Version.ALLURE.id}")
+    testImplementation("io.qameta.allure:allure-junit4:${Version.ALLURE.id}")
+
+    implementation("io.qameta.allure:allure-attachments:${Version.ALLURE.id}")
+
+    runtimeOnly("com.pinterest.ktlint:ktlint-core:${Version.KTLINT.id}")
+    runtimeOnly("com.pinterest.ktlint:ktlint-ruleset-standard:${Version.KTLINT.id}")
+    runtimeOnly("com.pinterest.ktlint:ktlint-reporter-plain:${Version.KTLINT.id}")
 }
 
-/*application {
-    // Define the main class for the application.
-    // mainClassName = "testLeCo.App"
-    mainClass.set("testLeCo.App")
-}*/
+// TODO: needed for Kotlin and kotlin.test 1.5.0
+/*
+val testCompile: Configuration by configurations.creating
+configurations {
+    testCompile.extendsFrom(testImplementation.get())
+}
+*/
 
 configure<AllureExtension> {
     autoconfigure = true
     aspectjweaver = true
-    version = versions["allure"]
-    allureJavaVersion = versions["java-version"]
+    version = Version.ALLURE.id
+    allureJavaVersion = Version.JAVA.id
 
     clean = true
 
@@ -196,30 +183,74 @@ configure<AllureExtension> {
     reportDir = file("../../allure-reports")
 
     useJUnit5 {
-        version = versions["allure"]
+        version = Version.ALLURE.id
     }
 }
 
+tasks.test {
+    filter {
+        exclude("/e2e/**")
+        exclude("TestRunner")
+        useJUnitPlatform()
+        // TODO: remove this one if not needed
+        testLogging.showStandardStreams = true
+    }
+    maxParallelForks = 3
+/*
 val test by tasks.getting(Test::class) {
     ignoreFailures = true
     // Use junit platform for unit tests
     useJUnitPlatform()
-    testLogging.showStandardStreams = true
+    testLogging.showStandardStreams = true */
     systemProperty("junit.jupiter.execution.parallel.enabled", "true")
     systemProperty("junit.jupiter.execution.parallel.config.strategy", "dynamic")
     systemProperty("junit.jupiter.extensions.autodetection.enabled", "true")
     // systemProperty("allure.results.directory", "../../allure-results")
 }
 
-/*tasks.withType<Checkstyle>().configureEach {
+tasks.withType<Checkstyle>().configureEach {
     reports {
         xml.isEnabled = false
         html.isEnabled = true
-        html.stylesheet = resources.text.fromFile("config/xsl/checkstyle-custom.xsl")
+        // html.stylesheet = resources.text.fromFile("config/xsl/checkstyle-custom.xsl")
     }
-}*/
+}
+
+tasks.withType<Pmd>() {
+    isConsoleOutput = true
+    // toolVersion = Version.PMD.id
+    rulesMinimumPriority.set(5)
+    ruleSets = listOf("category/java/errorprone.xml", "category/java/bestpractices.xml")
+}
 
 tasks.named<Wrapper>("wrapper") {
-    gradleVersion = "7.0"
+    gradleVersion = Version.GRADLE.id
     distributionType = Wrapper.DistributionType.ALL
+}
+
+enum class Version(val id: String) {
+    GATLING("3.5.1"),
+    JUNIT_JUPITER("5.7.1"),
+    JUNIT_PLATFORM("1.7.1"),
+    JUNIT4("4.13.2"),
+    SCALA_TEST("3.2.0"),
+    SCALA_TEST_PLUS("3.2.0.0"),
+    JACKSON("2.12.2"),
+    SNAKEYAML("1.28"),
+    JOOQ("3.14.8"),
+    POSTGRESQL("42.2.19"),
+    REST_ASSURED("4.3.3"),
+    HAMCREST("2.2"),
+    JAVAFAKER("1.0.2"),
+    AWAITILITY("4.0.3"),
+    CUCUMBER("6.8.1"),
+    CUCUMBER_JUNIT("6.10.2"),
+    ALLURE("2.13.9"),
+    ALLURE_GRADLE("2.8.1"),
+    JAVA("16"),
+    KOTLIN("1.4.32"),
+    GRADLE("7.0"),
+    PMD("6.21.0"),
+    KTLINT_GRADLE_PLUGIN("10.0.0"),
+    KTLINT("0.41.0");
 }
