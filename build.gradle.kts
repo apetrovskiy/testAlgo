@@ -227,6 +227,15 @@ tasks.withType<Checkstyle>().configureEach {
     }
 }
 
+tasks.googleJavaFormat {
+    // source = sourceSets*.allJava
+    // source = sourceSets.get(allJava)
+    source("src/special_dir")
+    include("**/*.java")
+    exclude("**/*Template.java")
+    exclude("src/test/template_*")
+}
+
 tasks.withType<Pmd>() {
     isConsoleOutput = true
     // toolVersion = Version.PMD.id
