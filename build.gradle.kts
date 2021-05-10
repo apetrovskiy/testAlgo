@@ -7,6 +7,7 @@
  */
 
 import io.qameta.allure.gradle.AllureExtension
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     // Apply the java plugin to add support for Java
@@ -45,6 +46,8 @@ plugins {
     // checkstyle
     pmd
     id("org.jlleitschuh.gradle.ktlint") version ("10.0.0")
+    id("cz.alenkacz.gradle.scalafmt") version ("1.16.2")
+    id("com.github.sherter.google-java-format") version("0.9")
 }
 
 /*
@@ -69,12 +72,18 @@ tasks.compileJava {
     options.release.set(Version.JAVA.id.toInt())
 }
 
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions.suppressWarnings = true
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions { jvmTarget = JavaVersion.VERSION_1_8.toString() }
+}
+
 sourceSets.main {
     java.srcDirs("src/main/java", "src/main/kotlin", "src/main/scala", "src/main/groovy")
 }
 
 sourceSets.test {
-    java.srcDirs("src/test/java", "src/test/kotlin", "src/test/scala", "src/test/groovy")
+    java.srcDirs("src/test/java", "src/test/sckotlin", "src/test/scala", "src/test/groovy")
 }
 
 repositories {
@@ -161,6 +170,8 @@ dependencies {
     runtimeOnly("com.pinterest.ktlint:ktlint-core:${Version.KTLINT.id}")
     runtimeOnly("com.pinterest.ktlint:ktlint-ruleset-standard:${Version.KTLINT.id}")
     runtimeOnly("com.pinterest.ktlint:ktlint-reporter-plain:${Version.KTLINT.id}")
+
+    // implementation("cz.alenkacz.gradle.scalafmt:cz.alenkacz.gradle.scalafmt.gradle.plugin:${Version.SCALA_FMT.id}")
 }
 
 // TODO: needed for Kotlin and kotlin.test 1.5.0
@@ -223,6 +234,13 @@ tasks.withType<Pmd>() {
     ruleSets = listOf("category/java/errorprone.xml", "category/java/bestpractices.xml")
 }
 
+scalafmt {
+    // .scalafmt.conf in the project root is default value, provide only if other location is needed
+    // config file has to be relative path from current project or root project in case of multimodule projects
+    // example usage: 
+    // configFilePath = ".scalafmt.conf"
+}
+
 tasks.named<Wrapper>("wrapper") {
     gradleVersion = Version.GRADLE.id
     distributionType = Wrapper.DistributionType.ALL
@@ -233,6 +251,7 @@ enum class Version(val id: String) {
     JUNIT_JUPITER("5.7.1"),
     JUNIT_PLATFORM("1.7.1"),
     JUNIT4("4.13.2"),
+    SCALA("2.13.5"),
     SCALA_TEST("3.2.0"),
     SCALA_TEST_PLUS("3.2.0.0"),
     JACKSON("2.12.2"),
@@ -252,5 +271,6 @@ enum class Version(val id: String) {
     GRADLE("7.0"),
     PMD("6.21.0"),
     KTLINT_GRADLE_PLUGIN("10.0.0"),
-    KTLINT("0.41.0");
+    KTLINT("0.41.0"),
+    SCALA_FMT("1.16.2");
 }
