@@ -1,0 +1,59 @@
+{
+  "total" : 41,
+  "items" : [ {
+    "uid" : "ce54350ef46b70a5bde2b8cd59835254",
+    "name" : "Foxford",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 6,
+      "unknown" : 0,
+      "total" : 6
+    }
+  }, {
+    "uid" : "7476b764b8660c16cad61037210d3cdc",
+    "name" : "Stephens",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 3,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 7
+    }
+  }, {
+    "uid" : "e6d85c1b035a8948eb6e6b1c0f16ced4",
+    "name" : "Sorting - Cajic",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "8675702577c6279e5d88775d803d563e",
+    "name" : "Durr Vie",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "f813fe3cb29fc222270989a3d99d704a",
+    "name" : "Yang Hu",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
+}
