@@ -1,3 +1,4 @@
+#!/bin/sh
 ./gradlew goJF
 ./gradlew ktlintFormat
 ./gradlew scalafmtAll

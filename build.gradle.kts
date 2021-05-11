@@ -43,6 +43,7 @@ plugins {
 
     id("io.qameta.allure") version "2.8.1"
 
+    jacoco
     // checkstyle
     pmd
     id("org.jlleitschuh.gradle.ktlint") version ("10.0.0")
@@ -71,6 +72,12 @@ java {
 tasks.compileJava {
     options.release.set(Version.JAVA.id.toInt())
 }
+tasks.compileScala {
+    options.release.set(Version.JAVA_FOR_SCALA.id.toInt())
+}
+tasks.compileTestScala {
+    options.release.set(Version.JAVA_FOR_SCALA.id.toInt())
+}
 
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions.suppressWarnings = true
@@ -78,12 +85,44 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
     kotlinOptions { jvmTarget = JavaVersion.VERSION_1_8.toString() }
 }
 
-sourceSets.main {
-    java.srcDirs("src/main/java", "src/main/kotlin", "src/main/scala", "src/main/groovy")
+sourceSets {
+    main {
+        withConvention(ScalaSourceSet::class) {
+            scala {
+                setSrcDirs(listOf(SourceSet.MAIN_JAVA.path, SourceSet.MAIN_SCALA.path))
+            }
+        }
+        // java.srcDirs(listOf<String>()) // SourceSet.MAIN_JAVA.path, SourceSet.MAIN_KOTLIN.path, SourceSet.MAIN_SCALA.path, SourceSet.MAIN_GROOVY.path)
+        java.srcDirs(listOf(SourceSet.MAIN_JAVA.path, SourceSet.MAIN_KOTLIN.path, SourceSet.MAIN_SCALA.path, SourceSet.MAIN_GROOVY.path))
+    }
+    test {
+        withConvention(ScalaSourceSet::class) {
+            scala {
+                setSrcDirs(listOf(SourceSet.TEST_JAVA.path, SourceSet.TEST_SCALA.path))
+            }
+        }
+        // java.srcDirs(listOf<String>()) // SourceSet.TEST_JAVA.path, SourceSet.TEST_KOTLIN.path, SourceSet.TEST_SCALA.path, SourceSet.TEST_GROOVY.path)
+        java.srcDirs(listOf(SourceSet.TEST_JAVA.path, SourceSet.TEST_KOTLIN.path, SourceSet.TEST_SCALA.path, SourceSet.TEST_GROOVY.path))
+    }
 }
 
-sourceSets.test {
-    java.srcDirs("src/test/java", "src/test/sckotlin", "src/test/scala", "src/test/groovy")
+tasks.named<AbstractCompile>("compileScala") {
+    // Scala only needs the declared dependencies
+    // (and not longer the output of compileJava)
+    classpath = sourceSets.main.get().compileClasspath
+}
+tasks.named<AbstractCompile>("compileJava") {
+    // Java also depends on the result of Scala compilation
+    // (which automatically makes it depend of compileGroovy)
+    classpath += files(sourceSets.main.get().withConvention(ScalaSourceSet::class) { scala }.classesDirectory)
+}
+
+val compileScala = tasks.named<AbstractCompile>("compileScala")
+compileKotlin.dependsOn(compileScala)
+compileKotlin.classpath += files(compileScala.get().destinationDir)
+tasks.compileJava.get().dependsOn(compileKotlin)
+tasks.named<org.gradle.jvm.tasks.Jar>("jar") {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
 repositories {
@@ -109,7 +148,7 @@ dependencies {
     implementation("org.clojure:clojure:1.10.2-alpha4")
 
     // Use Scala 2.13 in our library project
-    implementation("org.scala-lang:scala-library:2.13.3")
+    implementation("org.scala-lang:scala-library:${Version.SCALA.id}")
 
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api("org.apache.commons:commons-math3:3.6.1")
@@ -276,10 +315,22 @@ enum class Version(val id: String) {
     ALLURE("2.13.9"),
     ALLURE_GRADLE("2.8.1"),
     JAVA("16"),
+    JAVA_FOR_SCALA("11"),
     KOTLIN("1.4.32"),
     GRADLE("7.0"),
     PMD("6.21.0"),
     KTLINT_GRADLE_PLUGIN("10.0.0"),
     KTLINT("0.41.0"),
     SCALA_FMT("1.16.2");
+}
+
+enum class SourceSet(val path: String) {
+    MAIN_JAVA("src/main/java"),
+    MAIN_KOTLIN("src/main/kotlin"),
+    MAIN_SCALA("src/main/scala"),
+    MAIN_GROOVY("src/main/groovy"),
+    TEST_JAVA("src/test/java"),
+    TEST_KOTLIN("src/test/kotlin"),
+    TEST_SCALA("src/test/scala"),
+    TEST_GROOVY("src/test/groovy");
 }
