@@ -1,5 +1,5 @@
 {
-    "name": "testCoWa",
+    "name": "testAlgo",
     "devDependencies": {
         "chai": "^4.3.4",
         "jasmine": "^3.6.1",
