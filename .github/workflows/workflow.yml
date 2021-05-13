@@ -1,4 +1,4 @@
-name: Python 3.9, Ruby 2.7, Java 16, .NET 5, Go 1.16, Swift, Dart, allure
+name: Python 3.9, Ruby 2.7, Node.js 16, Java 16, .NET 5, Go 1.16, Swift, Dart, allure
 
 on: [push]
 
@@ -11,8 +11,8 @@ jobs:
     #   matrix:
     #     # ruby-version: ['2.6', '2.7', '3.0']
     #     ruby-version: ['2.7']
-    #     # node-version: [10.x, 12.x, 14.x, 15.x]
-    #     node-version: [15.x]
+    #     # node-version: [10.x, 12.x, 14.x, 15.x, 16.x]
+    #     node-version: [16.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -122,8 +122,8 @@ jobs:
     needs: build
     strategy:
       matrix:
-        # node-version: [10.x, 12.x, 14.x, 15.x]
-        node-version: [15.x]
+        # node-version: [10.x, 12.x, 14.x, 15.x, 16.x]
+        node-version: [16.x]
     steps:
     - uses: actions/checkout@v2
     - uses: ./.github/actions/allure-prep
