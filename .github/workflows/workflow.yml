@@ -177,10 +177,13 @@ jobs:
         GCO_ENABLED=0
         go mod vendor
 
+        echo "PWD"
+        echo $PWD
         echo "GOPATH"
         echo $GOPATH
         echo "GOROOT"
         echo $GOROOT
+        echo "ALLURE_RESULTS_PATH=$PWD" > "$PWD/variables.env"
 
         go build -v ./...
 
