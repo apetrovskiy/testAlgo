@@ -1199,6 +1199,8 @@ build
 .bloop/CodeSignTest-test.json
 
 allure-reports/*
+allure-results/*
+.nyc_output/*
 *result.json
 *container.json
 
