@@ -30,7 +30,6 @@ pytest = "*"
 regex = "*"
 six = "*"
 toml = "*"
-typed-ast = "*"
 typing-extensions = "*"
 wrapt = "*"
 Flask = "*"
@@ -59,4 +58,4 @@ pytest-xdist = "*"
 pytest = "*"
 
 [requires]
-python_version = "3.11"
+python_version = "3.9"
