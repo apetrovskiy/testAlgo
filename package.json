@@ -1,6 +1,7 @@
 {
     "name": "testAlgo",
     "devDependencies": {
+        "allure-commandline": "^2.13.8",
         "chai": "^4.3.4",
         "jasmine": "^3.6.1",
         "jest": "^26.6.3",
