@@ -1,0 +1,106 @@
+{
+  "uid" : "c3781baa12414d78",
+  "name" : "test_primes_sum[32-4096-1069931]",
+  "fullName" : "src.test.java.testAlgo.fox.lesson012.test_primes#test_primes_sum",
+  "historyId" : "8e7f29ad681bfac9897466e249e563e5",
+  "time" : {
+    "start" : 1689720020827,
+    "stop" : 1689720020832,
+    "duration" : 5
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Primes sum"
+  }, {
+    "name" : "feature",
+    "value" : "Foxford"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.fox.lesson012"
+  }, {
+    "name" : "suite",
+    "value" : "test_primes"
+  }, {
+    "name" : "host",
+    "value" : "fv-az401-175"
+  }, {
+    "name" : "thread",
+    "value" : "2154-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.fox.lesson012.test_primes"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "end",
+    "value" : "4096"
+  }, {
+    "name" : "expected_result",
+    "value" : "1069931"
+  }, {
+    "name" : "start",
+    "value" : "32"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "8028d5790ae876a9",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/117//#testresult/8028d5790ae876a9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689673771288,
+          "stop" : 1689673771292,
+          "duration" : 4
+        }
+      }, {
+        "uid" : "49f6971a4191726a",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/116//#testresult/49f6971a4191726a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689671431742,
+          "stop" : 1689671431746,
+          "duration" : 4
+        }
+      }, {
+        "uid" : "9756bdf6c61bcb69",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/111//#testresult/9756bdf6c61bcb69",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689670548425,
+          "stop" : 1689670548431,
+          "duration" : 6
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c3781baa12414d78.json",
+  "parameterValues" : [ "4096", "1069931", "32" ]
+}
