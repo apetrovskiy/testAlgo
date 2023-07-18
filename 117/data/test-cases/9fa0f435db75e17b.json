@@ -1,0 +1,88 @@
+{
+  "uid" : "9fa0f435db75e17b",
+  "name" : "test_reverse_array[input_array0-expected_result0]",
+  "fullName" : "src.test.java.testAlgo.yang_hu.test_reverse_array#test_reverse_array",
+  "historyId" : "89cd656ab3ca73e27dc338b3108994f7",
+  "time" : {
+    "start" : 1689673771390,
+    "stop" : 1689673771390,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.yang_hu"
+  }, {
+    "name" : "suite",
+    "value" : "test_reverse_array"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1233-983"
+  }, {
+    "name" : "thread",
+    "value" : "2074-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.yang_hu.test_reverse_array"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[90, 80, 70, 60, 50]"
+  }, {
+    "name" : "input_array",
+    "value" : "[50, 60, 70, 80, 90]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "6e35230d3a54f3ba",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/116//#testresult/6e35230d3a54f3ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689671431846,
+          "stop" : 1689671431846,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "e534dfe67fa5f385",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/111//#testresult/e534dfe67fa5f385",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689670548559,
+          "stop" : 1689670548559,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "9fa0f435db75e17b.json",
+  "parameterValues" : [ "[90, 80, 70, 60, 50]", "[50, 60, 70, 80, 90]" ]
+}
