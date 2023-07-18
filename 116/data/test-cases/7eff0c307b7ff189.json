@@ -1,0 +1,85 @@
+{
+  "uid" : "7eff0c307b7ff189",
+  "name" : "test_find_factors_version02[125-expected_result2]",
+  "fullName" : "src.test.java.testAlgo.stephens.ch02.test_find_factors#test_find_factors_version02",
+  "historyId" : "04a1312b052827ea589466de19fbc54a",
+  "time" : {
+    "start" : 1689671431760,
+    "stop" : 1689671431760,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Find factors, v2"
+  }, {
+    "name" : "feature",
+    "value" : "Stephens"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.stephens.ch02"
+  }, {
+    "name" : "suite",
+    "value" : "test_find_factors"
+  }, {
+    "name" : "host",
+    "value" : "fv-az736-698"
+  }, {
+    "name" : "thread",
+    "value" : "2130-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.stephens.ch02.test_find_factors"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[5, 5, 5]"
+  }, {
+    "name" : "input",
+    "value" : "125"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "a0c93a5d771cd7b",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/111//#testresult/a0c93a5d771cd7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689670548448,
+          "stop" : 1689670548448,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "7eff0c307b7ff189.json",
+  "parameterValues" : [ "[5, 5, 5]", "125" ]
+}

@@ -1,0 +1,85 @@
+{
+  "uid" : "179b417ed2e47ea9",
+  "name" : "test_bubble_sorting[input_array4-expected_result4]",
+  "fullName" : "src.test.java.testAlgo.yang_hu.test_bubble_sorting#test_bubble_sorting",
+  "historyId" : "30388792546e907c0848a7d29b66eaed",
+  "time" : {
+    "start" : 1689671431812,
+    "stop" : 1689671431812,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Yang Hu"
+  }, {
+    "name" : "story",
+    "value" : "Bubble sorting"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.yang_hu"
+  }, {
+    "name" : "suite",
+    "value" : "test_bubble_sorting"
+  }, {
+    "name" : "host",
+    "value" : "fv-az736-698"
+  }, {
+    "name" : "thread",
+    "value" : "2130-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.yang_hu.test_bubble_sorting"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[50, 60, 70, 80, 95]"
+  }, {
+    "name" : "input_array",
+    "value" : "[50, 60, 70, 80, 95]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "ef0f058f1ce2efbb",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/111//#testresult/ef0f058f1ce2efbb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689670548515,
+          "stop" : 1689670548515,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "179b417ed2e47ea9.json",
+  "parameterValues" : [ "[50, 60, 70, 80, 95]", "[50, 60, 70, 80, 95]" ]
+}

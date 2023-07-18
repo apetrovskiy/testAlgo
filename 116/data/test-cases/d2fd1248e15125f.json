@@ -1,0 +1,85 @@
+{
+  "uid" : "d2fd1248e15125f",
+  "name" : "test_primes_series[35-expected_result0]",
+  "fullName" : "src.test.java.testAlgo.fox.lesson012.test_primes#test_primes_series",
+  "historyId" : "c57442c407e769fb7a4fca17a0764282",
+  "time" : {
+    "start" : 1689671431740,
+    "stop" : 1689671431741,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Foxford"
+  }, {
+    "name" : "story",
+    "value" : "Primes series"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.fox.lesson012"
+  }, {
+    "name" : "suite",
+    "value" : "test_primes"
+  }, {
+    "name" : "host",
+    "value" : "fv-az736-698"
+  }, {
+    "name" : "thread",
+    "value" : "2130-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.fox.lesson012.test_primes"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]"
+  }, {
+    "name" : "input",
+    "value" : "35"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "cfbc1e58b11a415e",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/111//#testresult/cfbc1e58b11a415e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689670548423,
+          "stop" : 1689670548423,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d2fd1248e15125f.json",
+  "parameterValues" : [ "[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]", "35" ]
+}
