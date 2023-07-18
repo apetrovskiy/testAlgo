@@ -1,12 +1,12 @@
 {
-  "uid" : "d0f55470ccc424bf",
-  "name" : "Inequality case",
-  "fullName" : "src/test/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest.test.js.Inequality case",
-  "historyId" : "a3b77ed0eb35b12e8121b8246f1b89cd",
+  "uid" : "d80fb13f733e0cf5",
+  "name" : "Equality case",
+  "fullName" : "src/test/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest.test.js.Equality case",
+  "historyId" : "12496283ee99e7e3275a5e2e6695a035",
   "time" : {
-    "start" : 1689667871916,
-    "stop" : 1689667871916,
-    "duration" : 0
+    "start" : 1689667903069,
+    "stop" : 1689667903072,
+    "duration" : 3
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -23,7 +23,7 @@
     "value" : "src/test/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest.test.js"
   }, {
     "name" : "testMethod",
-    "value" : "Inequality case"
+    "value" : "Equality case"
   }, {
     "name" : "package",
     "value" : "src/test/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest.test.js"
@@ -49,27 +49,27 @@
         "total" : 3
       },
       "items" : [ {
-        "uid" : "6ff937194ff9b19",
-        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/86//#testresult/6ff937194ff9b19",
+        "uid" : "3caeced6182fd82f",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/86//#testresult/3caeced6182fd82f",
         "status" : "passed",
         "time" : {
-          "start" : 1689667698832,
+          "start" : 1689667698829,
           "stop" : 1689667698832,
-          "duration" : 0
+          "duration" : 3
         }
       }, {
-        "uid" : "b935b6f04439c1ab",
-        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/83//#testresult/b935b6f04439c1ab",
+        "uid" : "f996f649f3deaf08",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/83//#testresult/f996f649f3deaf08",
         "status" : "passed",
         "time" : {
-          "start" : 1689667623225,
+          "start" : 1689667623222,
           "stop" : 1689667623225,
-          "duration" : 0
+          "duration" : 3
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "d0f55470ccc424bf.json",
+  "source" : "d80fb13f733e0cf5.json",
   "parameterValues" : [ ]
 }
