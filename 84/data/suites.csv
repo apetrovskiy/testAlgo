@@ -1,3 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Tue Jul 18 08:07:13 GMT 2023","Tue Jul 18 08:07:13 GMT 2023","1","","src/test/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest.test.js","","src/test/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest.test.js","Inequality case","Inequality case",""
-"passed","Tue Jul 18 08:07:13 GMT 2023","Tue Jul 18 08:07:13 GMT 2023","2","","src/test/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest.test.js","","src/test/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest.test.js","Equality case","Equality case",""

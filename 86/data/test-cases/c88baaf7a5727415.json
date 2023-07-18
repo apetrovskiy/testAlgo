@@ -1,12 +1,12 @@
 {
-  "uid" : "d0a20de9a999c09f",
+  "uid" : "c88baaf7a5727415",
   "name" : "Equality case",
   "fullName" : "src/test/java/testAlgo/common_sense/ch02UniqueParts/codeUnderTest.test.js.Equality case",
   "historyId" : "12496283ee99e7e3275a5e2e6695a035",
   "time" : {
-    "start" : 1689667633383,
-    "stop" : 1689667633385,
-    "duration" : 2
+    "start" : 1689667698829,
+    "stop" : 1689667698832,
+    "duration" : 3
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -61,6 +61,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "d0a20de9a999c09f.json",
+  "source" : "c88baaf7a5727415.json",
   "parameterValues" : [ ]
 }
