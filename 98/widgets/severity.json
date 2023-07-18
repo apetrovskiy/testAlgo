@@ -1,0 +1,1 @@
+[{"uid":"9309ea30c97b1756","name":"Inequality case","time":{"start":1689668076618,"stop":1689668076619,"duration":1},"status":"passed","severity":"normal"},{"uid":"ee03cf15bc7ed339","name":"Equality case","time":{"start":1689668076616,"stop":1689668076618,"duration":2},"status":"passed","severity":"normal"}]
