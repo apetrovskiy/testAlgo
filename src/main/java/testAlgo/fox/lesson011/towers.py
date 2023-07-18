@@ -3,6 +3,6 @@ def move(n, start, finish):
         print(f"|    {n}   |    {start}  |    {finish}   |")
     else:
         tmp = 6 - start - finish
-        move(n-1, start, tmp)
+        move(n - 1, start, tmp)
         print(f"|    {n}   |    {start}  |    {finish}   |")
-        move(n-1, tmp, finish)
+        move(n - 1, tmp, finish)

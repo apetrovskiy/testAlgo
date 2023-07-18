@@ -1,24 +1,5 @@
 {
-    "python.testing.promptToConfigure": false,
-    "python.testing.nosetestsEnabled": true,
-    "python.testing.pytestEnabled": true,
-    "python.testing.unittestEnabled": true,
-    "python.testing.pytestArgs": [
-        "src/test/java/testAlgo"
-    ],
-    "python.testing.unittestArgs": [
-        "-v",
-        "-s",
-        "./src/test/java/testAlgo",
-        "-p",
-        "test_*.py"
-    ],
-    "python.testing.nosetestArgs": [
-        "src/test/java/testAlgo"
-    ],
     "files.watcherExclude": {
         "**/target": true
-    },
-    "rubyTestExplorer.minitestDirectory": "./src/test/java/testAlgo/",
-    "rubyTestExplorer.rspecDirectory": "./src/test/java/testAlgo/"
+    }
 }

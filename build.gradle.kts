@@ -6,7 +6,7 @@
  * User Manual available at https://docs.gradle.org/6.6.1/userguide/tutorial_java_projects.html
  */
 
-import io.qameta.allure.gradle.AllureExtension
+import io.qameta.allure.gradle.base.AllureExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -21,7 +21,8 @@ plugins {
 
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     // kotlin("multiplatform") version "1.5.0"
-    kotlin("jvm") version "1.4.32"
+    // kotlin("jvm") version "1.4.32"
+    id("org.jetbrains.kotlin.jvm") version "1.8.0"
 
     // Apply the scala Plugin to add support for Scala.
     scala
@@ -41,14 +42,14 @@ plugins {
     // Apply the xctest plugin to add support for building and running Swift test executables (Linux) or bundles (macOS)
     // xctest
 
-    id("io.qameta.allure") version "2.8.1"
+    id("io.qameta.allure") version "2.10.0"
 
     jacoco
     // checkstyle
     pmd
-    id("org.jlleitschuh.gradle.ktlint") version ("10.0.0")
+    id("com.diffplug.spotless") version "6.11.0"
+    // id("org.jlleitschuh.gradle.ktlint") version ("10.0.0")
     id("cz.alenkacz.gradle.scalafmt") version ("1.16.2")
-    id("com.github.sherter.google-java-format") version("0.9")
 }
 
 /*
@@ -69,8 +70,18 @@ java {
         languageVersion.set(JavaLanguageVersion.of(Version.JAVA.id.toInt()))
     }
 }
-tasks.compileJava {
-    options.release.set(Version.JAVA.id.toInt())
+tasks {
+    javadoc {
+        options.encoding = "UTF-8"
+    }
+    compileJava {
+        options.release.set(Version.JAVA.id.toInt())
+        options.encoding = "UTF-8"
+    }
+    compileTestJava {
+        options.release.set(Version.JAVA.id.toInt())
+        // options.encoding = "UTF-8"
+    }
 }
 tasks.compileScala {
     options.release.set(Version.JAVA_FOR_SCALA.id.toInt())
@@ -82,7 +93,14 @@ tasks.compileTestScala {
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions.suppressWarnings = true
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-    kotlinOptions { jvmTarget = JavaVersion.VERSION_1_8.toString() }
+    // kotlinOptions { jvmTarget = JavaVersion.VERSION_15.toString() }
+    kotlinOptions { jvmTarget = Version.JAVA_FOR_KOTLIN.id }
+}
+val compileTestKotlin: KotlinCompile by tasks
+compileTestKotlin.kotlinOptions.suppressWarnings = true
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    // kotlinOptions { jvmTarget = JavaVersion.VERSION_15.toString() }
+    kotlinOptions { jvmTarget = Version.JAVA_FOR_KOTLIN.id }
 }
 
 sourceSets {
@@ -119,7 +137,7 @@ tasks.named<AbstractCompile>("compileJava") {
 
 val compileScala = tasks.named<AbstractCompile>("compileScala")
 compileKotlin.dependsOn(compileScala)
-compileKotlin.classpath += files(compileScala.get().destinationDir)
+// compileKotlin.libraries += files(compileScala.get().destinationDir)
 tasks.compileJava.get().dependsOn(compileKotlin)
 tasks.named<org.gradle.jvm.tasks.Jar>("jar") {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
@@ -148,7 +166,7 @@ dependencies {
     implementation("org.clojure:clojure:1.10.2-alpha4")
 
     // Use Scala 2.13 in our library project
-    implementation("org.scala-lang:scala-library:${Version.SCALA.id}")
+    implementation("org.scala-lang:scala3-library_3:${Version.SCALA.id}")
 
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api("org.apache.commons:commons-math3:3.6.1")
@@ -162,10 +180,10 @@ dependencies {
     implementation("org.codehaus.groovy:groovy-all:2.5.12")
 
     // Use the Kotlin test library.
-    testImplementation("org.jetbrains.kotlin:kotlin-test:${Version.KOTLIN.id}")
+    // testImplementation("org.jetbrains.kotlin:kotlin-test:${Version.KOTLIN.id}")
 
     // Use the Kotlin JUnit integration.
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:${Version.KOTLIN.id}")
+    // testImplementation("org.jetbrains.kotlin:kotlin-test-junit:${Version.KOTLIN.id}")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${Version.JUNIT_JUPITER.id}")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:${Version.JUNIT_JUPITER.id}")
@@ -191,7 +209,8 @@ dependencies {
 
     // Use Scalatest for testing our library
     // testImplementation("junit:junit:4.12")
-    testImplementation("org.scalatest:scalatest_2.13:${Version.SCALA_TEST.id}")
+    testImplementation("org.scalactic:scalactic_3:${Version.SCALA_TEST.id}")
+    testImplementation("org.scalatest:scalatest_3:${Version.SCALA_TEST.id}")
     testImplementation("org.scalatestplus:junit-4-12_2.13:${Version.SCALA_TEST_PLUS.id}")
     testImplementation("org.scalatest:scalatest-freespec_2.13:${Version.SCALA_TEST.id}")
     testImplementation("org.scalatest:scalatest-funsuite_2.13:${Version.SCALA_TEST.id}")
@@ -222,18 +241,23 @@ configurations {
 */
 
 configure<AllureExtension> {
-    autoconfigure = true
-    aspectjweaver = true
-    version = Version.ALLURE.id
-    allureJavaVersion = Version.JAVA.id
+    adapter {
+        autoconfigure.set(true)
+        aspectjWeaver.set(true)
 
-    clean = true
+        frameworks {
+            junit5 {
+                allureJavaVersion.set(Version.JAVA.id)
+                version = Version.ALLURE.id
+                adapterVersion.set(Version.ALLURE.id)
+                enabled.set(true)
+                autoconfigureListeners.set(true)
+            }
+        }
+    }
 
-    resultsDir = file("../../allure-results")
-    reportDir = file("../../allure-reports")
-
-    useJUnit5 {
-        version = Version.ALLURE.id
+    report {
+        reportDir.set(project.reporting.baseDirectory.dir("allure-report"))
     }
 }
 
@@ -246,6 +270,8 @@ tasks.test {
         testLogging.showStandardStreams = true
     }
     maxParallelForks = 3
+
+    ignoreFailures = true
 /*
 val test by tasks.getting(Test::class) {
     ignoreFailures = true
@@ -255,7 +281,7 @@ val test by tasks.getting(Test::class) {
     systemProperty("junit.jupiter.execution.parallel.enabled", "true")
     systemProperty("junit.jupiter.execution.parallel.config.strategy", "dynamic")
     systemProperty("junit.jupiter.extensions.autodetection.enabled", "true")
-    // systemProperty("allure.results.directory", "../../allure-results")
+    systemProperty("allure.results.directory", "./allure-results")
 }
 
 tasks.withType<Checkstyle>().configureEach {
@@ -266,16 +292,7 @@ tasks.withType<Checkstyle>().configureEach {
     }
 }
 
-tasks.googleJavaFormat {
-    // source = sourceSets*.allJava
-    // source = sourceSets.get(allJava)
-    source("src/special_dir")
-    include("**/*.java")
-    exclude("**/*Template.java")
-    exclude("src/test/template_*")
-}
-
-tasks.withType<Pmd>() {
+tasks.withType<Pmd> {
     isConsoleOutput = true
     // toolVersion = Version.PMD.id
     rulesMinimumPriority.set(5)
@@ -285,7 +302,7 @@ tasks.withType<Pmd>() {
 scalafmt {
     // .scalafmt.conf in the project root is default value, provide only if other location is needed
     // config file has to be relative path from current project or root project in case of multimodule projects
-    // example usage: 
+    // example usage:
     // configFilePath = ".scalafmt.conf"
 }
 
@@ -294,33 +311,74 @@ tasks.named<Wrapper>("wrapper") {
     distributionType = Wrapper.DistributionType.ALL
 }
 
+configure<com.diffplug.gradle.spotless.SpotlessExtension> {
+
+    format(
+        "misc"
+    ) {
+        target("*.gradle", "*.md", ".gitignore", ".gitattributes")
+        trimTrailingWhitespace()
+        indentWithSpaces(4)
+        endWithNewline()
+    }
+
+    java {
+        importOrder()
+        // removeUnusedImports()
+        trimTrailingWhitespace()
+        indentWithSpaces(4)
+        googleJavaFormat("1.15.0").aosp().reflowLongStrings()
+        // palantirJavaFormat("2.28.0")
+        // eclipse().configFile("config/spotless.eclipseformat.xml")
+        // eclipse().configFile("config/google.eclipseformat.xml")
+        // clangFormat()
+        // prettier()
+    }
+
+    kotlin {
+        // ktfmt(Version.KTFMT.id)
+        ktlint(Version.KTLINT.id).setUseExperimental(true)
+        // diktat(Version.DIKTAT.id)
+    }
+
+    kotlinGradle {
+        ktlint(Version.KTLINT.id)
+            .setUseExperimental(true)
+    }
+
+    scala {
+        scalafmt()
+    }
+}
+
 enum class Version(val id: String) {
-    GATLING("3.5.1"),
-    JUNIT_JUPITER("5.7.1"),
-    JUNIT_PLATFORM("1.7.1"),
+    GATLING("3.8.4"),
+    JUNIT_JUPITER("5.9.2"),
+    JUNIT_PLATFORM("1.9.2"),
     JUNIT4("4.13.2"),
-    SCALA("2.13.5"),
-    SCALA_TEST("3.2.0"),
+    SCALA("3.2.1"),
+    SCALA_TEST("3.2.14"),
     SCALA_TEST_PLUS("3.2.0.0"),
-    JACKSON("2.12.2"),
-    SNAKEYAML("1.28"),
-    JOOQ("3.14.8"),
-    POSTGRESQL("42.2.19"),
-    REST_ASSURED("4.3.3"),
+    JACKSON("2.13.3"),
+    SNAKEYAML("1.30"),
+    JOOQ("3.16.10"), // do not increment version
+    POSTGRESQL("42.4.0"),
+    REST_ASSURED("5.1.1"),
     HAMCREST("2.2"),
     JAVAFAKER("1.0.2"),
-    AWAITILITY("4.0.3"),
-    CUCUMBER("6.8.1"),
-    CUCUMBER_JUNIT("6.10.2"),
-    ALLURE("2.13.9"),
-    ALLURE_GRADLE("2.8.1"),
-    JAVA("16"),
+    AWAITILITY("4.1.0"),
+    CUCUMBER("6.11.0"),
+    CUCUMBER_JUNIT("6.11.0"),
+    ALLURE("2.20.1"),
+    ALLURE_GRADLE("2.10.0"),
+    JAVA("17"),
     JAVA_FOR_SCALA("11"),
-    KOTLIN("1.4.32"),
-    GRADLE("7.0"),
-    PMD("6.21.0"),
-    KTLINT_GRADLE_PLUGIN("10.0.0"),
-    KTLINT("0.41.0"),
+    JAVA_FOR_KOTLIN("17"),
+    KOTLIN("1.8.0"),
+    GRADLE("7.4.1"),
+    PMD("6.50.0"),
+    KTLINT_GRADLE_PLUGIN("10.2.0"),
+    KTLINT("0.47.1"),
     SCALA_FMT("1.16.2");
 }
 

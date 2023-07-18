@@ -1,10 +1,9 @@
 from typing import List
 
 
-def dichotomy_binary_search(
-        input_array: List[int], search_value: int) -> List[int]:
+def dichotomy_binary_search(input_array: List[int], search_value: int) -> List[int]:
     # TODO: implement this
-    '''
+    """
     wrong
     # if len(input_array) == 0:
     #     return -1
@@ -23,7 +22,7 @@ def dichotomy_binary_search(
             1:len(input_array)-1]}")
         return dichotomy_binary_search(
             input_array[mid_index+1:len(input_array)-1], search_value)
-    '''
+    """
     # this works
     length = len(input_array)
     low = 0
@@ -34,7 +33,7 @@ def dichotomy_binary_search(
         if input_array[mid] == search_value:
             return mid
         elif input_array[mid] < search_value:
-            low = mid+1
+            low = mid + 1
         elif input_array[mid] > search_value:
-            high = mid-1
+            high = mid - 1
     return -1

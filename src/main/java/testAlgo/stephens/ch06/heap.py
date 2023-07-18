@@ -9,8 +9,10 @@ def array_to_heap_stephens(input_array: List[int]) -> List[int]:
             parent_index: int = (index - 1) // 2
             if input_array[index] <= input_array[parent_index]:
                 break
-            input_array[index], input_array[parent_index] = \
-                input_array[parent_index], input_array[index]
+            input_array[index], input_array[parent_index] = (
+                input_array[parent_index],
+                input_array[index],
+            )
             # temp: int = input_array[index]
             # input_array[index] = input_array[parent_index]
             # input_array[parent_index] = temp
@@ -21,18 +23,24 @@ def array_to_heap_stephens(input_array: List[int]) -> List[int]:
 
 def heapify(input_array: List[int], array_len: int, current_index: int):
     largest: int = current_index
-    left_child_index = 2*current_index+1
-    right_child_index = 2*current_index+2
-    if left_child_index < array_len and \
-            input_array[left_child_index] > input_array[largest]:
+    left_child_index = 2 * current_index + 1
+    right_child_index = 2 * current_index + 2
+    if (
+        left_child_index < array_len
+        and input_array[left_child_index] > input_array[largest]
+    ):
         largest = left_child_index
-    if right_child_index < array_len and \
-            input_array[right_child_index] > input_array[largest]:
+    if (
+        right_child_index < array_len
+        and input_array[right_child_index] > input_array[largest]
+    ):
         largest = right_child_index
 
     if largest != current_index:
-        input_array[current_index], input_array[largest] = \
-            input_array[largest], input_array[current_index]
+        input_array[current_index], input_array[largest] = (
+            input_array[largest],
+            input_array[current_index],
+        )
         heapify(input_array, array_len, largest)
 
 

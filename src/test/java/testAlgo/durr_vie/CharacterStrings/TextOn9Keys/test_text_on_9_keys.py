@@ -1,14 +1,15 @@
 import allure
 import pytest
-from src.main.java.testAlgo.durr_vie.CharacterStrings. \
-    TextOn9Keys.text_on_9_keys import text_on_9_keys
+from src.main.java.testAlgo.durr_vie.CharacterStrings.TextOn9Keys.text_on_9_keys import (
+    text_on_9_keys,
+)
 
 
-test_data = [(2665687, 'bonjour')]
+test_data = [(2665687, "bonjour")]
 
 
-@allure.feature('Durr Vie')
-@allure.story('T9')
+@allure.feature("Durr Vie")
+@allure.story("T9")
 @pytest.mark.skip(reason="TODO: no way of currently testing this")
 @pytest.mark.parametrize("input,expected_result", test_data)
 def test_text_on_9_keys(input: int, expected_result: str):

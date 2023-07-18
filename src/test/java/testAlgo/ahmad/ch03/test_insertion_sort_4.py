@@ -3,9 +3,7 @@ from typing import List
 from src.main.java.testAlgo.ahmad.ch03.insertion_sort_4 import insertion_sort
 
 
-test_data = [
-    ([25, 26, 22, 24, 27, 23, 21], [21, 22, 23, 24, 25, 26, 27])
-]
+test_data = [([25, 26, 22, 24, 27, 23, 21], [21, 22, 23, 24, 25, 26, 27])]
 
 
 @pytest.mark.parametrize("input_array,expected_result", test_data)

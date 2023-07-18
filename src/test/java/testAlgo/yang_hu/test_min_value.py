@@ -6,7 +6,7 @@ from src.main.java.testAlgo.yang_hu.min_value import min_value
 test_data = [
     ([60, 80, 95, 50, 70], 50),
     ([50, 80, 95, 60, 70], 50),
-    ([60, 80, 95, 70, 50], 50)
+    ([60, 80, 95, 70, 50], 50),
 ]
 
 
