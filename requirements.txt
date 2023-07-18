@@ -14,7 +14,7 @@ click==7.1.2
 colorama==0.4.4
 execnet==1.8.0
 flake8==3.8.4
-Flask==1.1.2
+Flask==2.2.5
 glob2==0.7
 idna==2.10
 iniconfig==1.1.1
