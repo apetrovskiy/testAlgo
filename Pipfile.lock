@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a916a341728ca849774162033dfe6f2843d4e586c61704d6eea3d122f877699b"
+            "sha256": "5a4ffc22c61e59329ed14e424cc48de660a4d60158ae67727b77952380736f1e"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -103,11 +103,11 @@
         },
         "certifi": {
             "hashes": [
-                "sha256:1a4995114262bffbc2413b159f2a1a480c969de6e6eb13ee966d470af86af59c",
-                "sha256:719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"
+                "sha256:35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3",
+                "sha256:4ad3232f5e926d6718ec31cfc1fcadfde020920e278684144551c91769c7bc18"
             ],
             "index": "pypi",
-            "version": "==2020.12.5"
+            "version": "==2022.12.7"
         },
         "chardet": {
             "hashes": [
@@ -344,11 +344,11 @@
         },
         "packaging": {
             "hashes": [
-                "sha256:dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb",
-                "sha256:ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522"
+                "sha256:2198ec20bd4c017b8f9717e00f0c8714076fc2fd93816750ab48e2c41de2cfd3",
+                "sha256:957e2148ba0e1a3b282772e791ef1d8083648bc131c8ab0c1feba110ce1146c3"
             ],
-            "markers": "python_version >= '3.6'",
-            "version": "==21.3"
+            "markers": "python_version >= '3.7'",
+            "version": "==22.0"
         },
         "parameterized": {
             "hashes": [
@@ -439,11 +439,11 @@
         },
         "pytest-bdd": {
             "hashes": [
-                "sha256:1dcea36d5fb59291a5d3c186f4cbbd04cdb62a304341f9a360a07682ba1aba18",
-                "sha256:f894e589c9ee9e6a66c54e4917fafbbd11801fce9ce01e9b56dc15ccc57e4620"
+                "sha256:138af3592bcce5d4684b0d690777cf199b39ce45d423ca28086047ffe6111010",
+                "sha256:57eba5878d77036f356a85fb1d108cb061d8af4fb4d032b1a424fa9abe9e498b"
             ],
-            "markers": "python_version >= '3.7'",
-            "version": "==6.0.1"
+            "markers": "python_version >= '3.7' and python_version < '4'",
+            "version": "==6.1.1"
         },
         "pytest-forked": {
             "hashes": [
