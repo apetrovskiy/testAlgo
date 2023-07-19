@@ -1,0 +1,131 @@
+{
+  "uid" : "9369f393321b2dbe",
+  "name" : "test_bucket_sorting_2[input_array0-expected_result0]",
+  "fullName" : "src.test.java.testAlgo.stephens.ch06.test_bucket_sorting_2#test_bucket_sorting_2",
+  "historyId" : "82f0dc2d390d846045bf9ebd43b23bc9",
+  "time" : {
+    "start" : 1689768303292,
+    "stop" : 1689768303292,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "Skipped: TODO: no way of currently testing this",
+  "statusTrace" : "('/home/runner/work/testAlgo/testAlgo/src/test/java/testAlgo/stephens/ch06/test_bucket_sorting_2.py', 10, 'Skipped: TODO: no way of currently testing this')",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Stephens"
+  }, {
+    "name" : "story",
+    "value" : "Bucket sorting"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.skip(reason='TODO: no way of currently testing this')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.stephens.ch06"
+  }, {
+    "name" : "suite",
+    "value" : "test_bucket_sorting_2"
+  }, {
+    "name" : "host",
+    "value" : "fv-az620-591"
+  }, {
+    "name" : "thread",
+    "value" : "2061-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.stephens.ch06.test_bucket_sorting_2"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+  }, {
+    "name" : "input_array",
+    "value" : "[0, 1, 2, 4, 5, 6, 3, 7, 8, 9]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 6,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "9667a730db009b2",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/120//#testresult/9667a730db009b2",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1689765471816,
+          "stop" : 1689765471816,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "ded93b03f0417ef0",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/118//#testresult/ded93b03f0417ef0",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1689720020889,
+          "stop" : 1689720020889,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "e9bc2a07c5601256",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/117//#testresult/e9bc2a07c5601256",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1689673771331,
+          "stop" : 1689673771331,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "7bf3cb21a2f80ea1",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/116//#testresult/7bf3cb21a2f80ea1",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1689671431786,
+          "stop" : 1689671431786,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "587692e1d2d717c7",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/111//#testresult/587692e1d2d717c7",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1689670548482,
+          "stop" : 1689670548482,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.skip(reason='TODO: no way of currently testing this')" ]
+  },
+  "source" : "9369f393321b2dbe.json",
+  "parameterValues" : [ "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]", "[0, 1, 2, 4, 5, 6, 3, 7, 8, 9]" ]
+}

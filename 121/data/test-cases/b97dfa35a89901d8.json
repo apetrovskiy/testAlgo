@@ -1,0 +1,128 @@
+{
+  "uid" : "b97dfa35a89901d8",
+  "name" : "test_combine[input10-input20-expected_result0]",
+  "fullName" : "src.test.java.testAlgo.yang_hu.test_merge_sort#test_combine",
+  "historyId" : "40f4f44d15113f0335ce8d098c8f0e12",
+  "time" : {
+    "start" : 1689768303370,
+    "stop" : 1689768303370,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "Skipped: TODO: no way of currently testing this",
+  "statusTrace" : "('/home/runner/work/testAlgo/testAlgo/src/test/java/testAlgo/yang_hu/test_merge_sort.py', 25, 'Skipped: TODO: no way of currently testing this')",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.skip(reason='TODO: no way of currently testing this')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.yang_hu"
+  }, {
+    "name" : "suite",
+    "value" : "test_merge_sort"
+  }, {
+    "name" : "host",
+    "value" : "fv-az620-591"
+  }, {
+    "name" : "thread",
+    "value" : "2061-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.yang_hu.test_merge_sort"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[1, 2, 3, 4, 5, 6, 7, 8]"
+  }, {
+    "name" : "input1",
+    "value" : "[1, 3, 5, 7]"
+  }, {
+    "name" : "input2",
+    "value" : "[2, 4, 6, 8]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 6,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "38eaf5f34921ff26",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/120//#testresult/38eaf5f34921ff26",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1689765471904,
+          "stop" : 1689765471904,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "9b568b213b88a217",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/118//#testresult/9b568b213b88a217",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1689720020965,
+          "stop" : 1689720020965,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "7a72ed9156a3561",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/117//#testresult/7a72ed9156a3561",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1689673771381,
+          "stop" : 1689673771381,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "ef38dcdff9110634",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/116//#testresult/ef38dcdff9110634",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1689671431837,
+          "stop" : 1689671431837,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "ad57c48b73b48bb4",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/111//#testresult/ad57c48b73b48bb4",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: TODO: no way of currently testing this",
+        "time" : {
+          "start" : 1689670548547,
+          "stop" : 1689670548547,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.skip(reason='TODO: no way of currently testing this')" ]
+  },
+  "source" : "b97dfa35a89901d8.json",
+  "parameterValues" : [ "[1, 2, 3, 4, 5, 6, 7, 8]", "[1, 3, 5, 7]", "[2, 4, 6, 8]" ]
+}
