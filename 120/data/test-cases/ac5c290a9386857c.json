@@ -1,0 +1,112 @@
+{
+  "uid" : "ac5c290a9386857c",
+  "name" : "test_insertion_sort[input_array0-expected_result0]",
+  "fullName" : "src.test.java.testAlgo.cajic.test_insertion_sort#test_insertion_sort",
+  "historyId" : "479e2cfa1a52dce262e765e6c68ac9f3",
+  "time" : {
+    "start" : 1689765471691,
+    "stop" : 1689765471691,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Insertion sort"
+  }, {
+    "name" : "feature",
+    "value" : "Sorting - Cajic"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.test.java.testAlgo.cajic"
+  }, {
+    "name" : "suite",
+    "value" : "test_insertion_sort"
+  }, {
+    "name" : "host",
+    "value" : "fv-az168-813"
+  }, {
+    "name" : "thread",
+    "value" : "2119-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.test.java.testAlgo.cajic.test_insertion_sort"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_result",
+    "value" : "[1, 2, 4, 5, 7, 8]"
+  }, {
+    "name" : "input_array",
+    "value" : "[4, 7, 1, 2, 8, 5]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "d2f6c2716b234bb0",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/118//#testresult/d2f6c2716b234bb0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689720020766,
+          "stop" : 1689720020766,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "a6b0f34e2e5a6a09",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/117//#testresult/a6b0f34e2e5a6a09",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689673771248,
+          "stop" : 1689673771248,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "b83729d77c7ef927",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/116//#testresult/b83729d77c7ef927",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689671431702,
+          "stop" : 1689671431702,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "eae9d68a2c0deb4d",
+        "reportUrl" : "https://apetrovskiy.github.io/testAlgo/111//#testresult/eae9d68a2c0deb4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689670548373,
+          "stop" : 1689670548374,
+          "duration" : 1
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ac5c290a9386857c.json",
+  "parameterValues" : [ "[1, 2, 4, 5, 7, 8]", "[4, 7, 1, 2, 8, 5]" ]
+}
