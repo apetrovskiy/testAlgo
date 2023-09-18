@@ -1,5 +1,5 @@
 name: 
-  testCoWa
+  testAlgo
 dependencies:
   test:
 environment:
