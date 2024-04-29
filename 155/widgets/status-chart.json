@@ -1,1 +1,1 @@
-[ ]
+[{"uid":"f1b70d3c1d22538b","name":"Equality case","time":{"start":1714419887558,"stop":1714419887559,"duration":1},"status":"passed","severity":"normal"},{"uid":"5c68096c1fd30b92","name":"Inequality case","time":{"start":1714419887559,"stop":1714419887560,"duration":1},"status":"passed","severity":"normal"}]
