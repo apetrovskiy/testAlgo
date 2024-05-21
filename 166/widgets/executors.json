@@ -1,10 +1,1 @@
-[ {
-  "name" : "GitHub Actions",
-  "type" : "github",
-  "url" : "https://apetrovskiy.github.io/testAlgo",
-  "buildOrder" : 166,
-  "buildName" : "GitHub Actions Run #749227507",
-  "buildUrl" : "https://github.com/apetrovskiy/testAlgo/actions/runs/749227507",
-  "reportName" : "Allure Report with history",
-  "reportUrl" : "https://apetrovskiy.github.io/testAlgo/166/"
-} ]
+[{"name":"GitHub Actions","type":"github","url":"https://apetrovskiy.github.io/testAlgo","buildOrder":166,"buildName":"GitHub Actions Run #9178836346","buildUrl":"https://github.com/apetrovskiy/testAlgo/actions/runs/9178836346","reportName":"Allure Report with history","reportUrl":"https://apetrovskiy.github.io/testAlgo/166/"}]
