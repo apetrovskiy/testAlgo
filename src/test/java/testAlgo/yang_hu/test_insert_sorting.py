@@ -1,7 +1,8 @@
-import pytest
 from typing import List
-from src.main.java.testAlgo.yang_hu.insert_sorting import insert_sorting
 
+import pytest
+
+from src.main.java.testAlgo.yang_hu.insert_sorting import insert_sorting
 
 test_data = [
     ([80, 70, 60, 50, 95], [50, 60, 70, 80, 95]),

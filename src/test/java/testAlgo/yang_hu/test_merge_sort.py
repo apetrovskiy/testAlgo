@@ -1,7 +1,8 @@
-import pytest
 from typing import List
-from src.main.java.testAlgo.yang_hu.merge_sort import combine, merge_sort
 
+import pytest
+
+from src.main.java.testAlgo.yang_hu.merge_sort import combine, merge_sort
 
 test_data = [([35, 12, 24, 29, 13, 1, 45, 3], [1, 3, 12, 13, 24, 29, 35, 45])]
 

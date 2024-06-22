@@ -3,8 +3,8 @@ from collections import Counter
 from typing import List
 
 
-def version01_clean_python_mine(input: str) -> List[List[str]]:
-    input_list = input.split(" ")
+def version01_clean_python_mine(input_data: str) -> List[List[str]]:
+    input_list = input_data.split(" ")
     print(input_list)
     l1 = [(x, "".join(sorted(x))) for x in input_list]
     print(l1)
@@ -19,8 +19,8 @@ def version01_clean_python_mine(input: str) -> List[List[str]]:
     return []
 
 
-def version02_clean_python_kite(input: str) -> List[List[str]]:
-    input_list = input.split(" ")
+def version02_clean_python_kite(input_data: str) -> List[List[str]]:
+    input_list = input_data.split(" ")
     # https://www.kite.com/python/answers/how-to-group-a-list-by-values-in-python
     list_of_lists = [[x, "".join(sorted(x))] for x in input_list]
     all_values = [list[1] for list in list_of_lists]
@@ -38,8 +38,8 @@ def version02_clean_python_kite(input: str) -> List[List[str]]:
     return reduced_grouped_list
 
 
-def version03_itertools_kite(input: str) -> List[List[str]]:
-    input_list = input.split(" ")
+def version03_itertools_kite(input_data: str) -> List[List[str]]:
+    input_list = input_data.split(" ")
     # https://www.kite.com/python/examples/4677/itertools-group-list-items-by-keys
     list_of_lists = [[x, "".join(sorted(x))] for x in input_list]
 
@@ -58,7 +58,7 @@ def version03_itertools_kite(input: str) -> List[List[str]]:
     return reduced_grouped_list
 
 
-def anagrams(input: str) -> List[str]:
+def anagrams(input_data: str) -> List[str]:
     # return version01_clean_python_mine(input)
-    return version02_clean_python_kite(input)
+    return version02_clean_python_kite(input_data)
     # return version03_itertools_kite(input)

@@ -1,8 +1,9 @@
-import allure
-import pytest
-from src.main.java.testAlgo.durr_vie.CharacterStrings.Anagrams.anagrams import anagrams
 from typing import List
 
+import allure
+import pytest
+
+from src.main.java.testAlgo.durr_vie.CharacterStrings.Anagrams.anagrams import anagrams
 
 test_data = [
     (
@@ -23,11 +24,11 @@ test_data = [
 
 @allure.feature("Durr Vie")
 @allure.story("Anagrams")
-@pytest.mark.parametrize("input,expected_result", test_data)
-def test_anagrams(input: str, expected_result: List[str]):
+@pytest.mark.parametrize("input_data,expected_result", test_data)
+def test_anagrams(input_data: str, expected_result: List[str]):
     [x.sort() for x in expected_result]
     expected_result.sort()
-    actual_result = anagrams(input)
+    actual_result = anagrams(input_data)
     [x.sort() for x in actual_result]
     actual_result.sort()
     assert len(actual_result) == len(expected_result)
