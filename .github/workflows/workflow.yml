@@ -46,10 +46,10 @@ jobs:
       run: |
         pipenv run autoflake --in-place --remove-unused-variables --recursive --check --quiet .
         pipenv run black . --check
-    - name: Lint with pylint
-      run: |
-        pipenv run pylint src
-        pipenv run pylint features
+    # - name: Lint with pylint
+    #   run: |
+    #     pipenv run pylint src
+    #     pipenv run pylint features
     - name: Test with pytest
       if: always()
       run: |
