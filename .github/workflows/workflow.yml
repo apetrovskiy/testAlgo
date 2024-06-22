@@ -447,7 +447,7 @@ jobs:
     #     PUBLISH_DIR: allure-history
 
     - name: Build test report
-      uses: simple-elf/allure-action@v1.9
+      uses: simple-elf/allure-report-action@master
       if: always()
       with:
         gh_pages: gh-pages
