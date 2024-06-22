@@ -1,8 +1,9 @@
+from typing import List
+
 import allure
 import pytest
-from typing import List
-from src.main.java.testAlgo.yang_hu.bubble_sorting import bubble_sorting
 
+from src.main.java.testAlgo.yang_hu.bubble_sorting import bubble_sorting
 
 test_data = [
     ([60, 50, 95, 80, 70], [50, 60, 70, 80, 95]),

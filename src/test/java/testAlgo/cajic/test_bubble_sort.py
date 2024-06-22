@@ -1,8 +1,9 @@
+from typing import List
+
 import allure
 import pytest
-from typing import List
-from src.main.java.testAlgo.cajic.bubble_sort import bubble_sort
 
+from src.main.java.testAlgo.cajic.bubble_sort import bubble_sort
 
 test_data = [
     ([3, 7, 1, 4, 6, 5], [1, 3, 4, 5, 6, 7]),

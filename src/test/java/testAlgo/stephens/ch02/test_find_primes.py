@@ -1,8 +1,9 @@
-import allure
-from src.main.java.testAlgo.stephens.ch02.find_primes import find_primes
 from typing import List
+
+import allure
 import pytest
 
+from src.main.java.testAlgo.stephens.ch02.find_primes import find_primes
 
 test_data = [
     (4, [2, 3]),
@@ -83,6 +84,6 @@ test_data = [
 
 @allure.feature("Stephens")
 @allure.story("Find primes")
-@pytest.mark.parametrize("input,expected_result", test_data)
-def test_find_primes(input: int, expected_result: List[int]):
-    assert expected_result == find_primes(input)
+@pytest.mark.parametrize("input_data,expected_result", test_data)
+def test_find_primes(input_data: int, expected_result: List[int]):
+    assert expected_result == find_primes(input_data)

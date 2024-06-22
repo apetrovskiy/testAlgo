@@ -1,8 +1,9 @@
+from typing import List
+
 import allure
 import pytest
-from typing import List
-from src.main.java.testAlgo.cajic.insertion_sort import insertion_sort
 
+from src.main.java.testAlgo.cajic.insertion_sort import insertion_sort
 
 test_data = [
     ([4, 7, 1, 2, 8, 5], [1, 2, 4, 5, 7, 8]),

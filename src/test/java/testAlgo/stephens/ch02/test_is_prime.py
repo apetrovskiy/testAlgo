@@ -1,7 +1,7 @@
 import allure
-from src.main.java.testAlgo.stephens.ch02.is_prime import is_prime
 import pytest
 
+from src.main.java.testAlgo.stephens.ch02.is_prime import is_prime
 
 test_data = [(5, 100, True), (6, 2, False), (27, 5, False), (37, 100, True)]
 
