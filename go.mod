@@ -1,6 +1,6 @@
 module github.com/apetrovskiy/testAlgo
 
-go 1.20
+go 1.22
 
 require (
 	github.com/onsi/ginkgo v1.16.1
