@@ -437,13 +437,13 @@ jobs:
         allure_history: allure-history
         keep_reports: 50
 
-    - name: Deploy report to Github Pages
-      if: always()
+    - name: Publish test report
       uses: peaceiris/actions-gh-pages@v3
-      env:
-        PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: allure-history
+      if: always()
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: allure-history
   # dotnet-format:
   #   runs-on: ubuntu-latest
   #   steps:
