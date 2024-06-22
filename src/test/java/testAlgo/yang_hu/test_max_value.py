@@ -1,7 +1,8 @@
-import pytest
 from typing import List
-from src.main.java.testAlgo.yang_hu.max_value import max_value
 
+import pytest
+
+from src.main.java.testAlgo.yang_hu.max_value import max_value
 
 test_data = [([60, 50, 95, 80, 70], 95)]
 

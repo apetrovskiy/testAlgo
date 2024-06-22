@@ -1,8 +1,9 @@
+from typing import List
+
 import allure
 import pytest
-from typing import List
-from src.main.java.testAlgo.fox.lesson012.primes import is_prime_number
 
+from src.main.java.testAlgo.fox.lesson012.primes import is_prime_number
 
 test_data = [(13, True), (15, False)]
 
@@ -13,16 +14,16 @@ test_data_for_sum = [(32, 4096, 1069931)]
 
 @allure.feature("Foxford")
 @allure.story("Is prime number")
-@pytest.mark.parametrize("input,expected_result", test_data)
-def test_is_prime_number(input: int, expected_result: bool):
-    assert expected_result == is_prime_number(input)
+@pytest.mark.parametrize("input_data,expected_result", test_data)
+def test_is_prime_number(input_data: int, expected_result: bool):
+    assert expected_result == is_prime_number(input_data)
 
 
 @allure.feature("Foxford")
 @allure.story("Primes series")
-@pytest.mark.parametrize("input,expected_result", test_data_for_series)
-def test_primes_series(input: int, expected_result: List[int]):
-    assert expected_result == [x for x in range(2, input) if is_prime_number(x)]
+@pytest.mark.parametrize("input_data,expected_result", test_data_for_series)
+def test_primes_series(input_data: int, expected_result: List[int]):
+    assert expected_result == [x for x in range(2, input_data) if is_prime_number(x)]
 
 
 @allure.feature("Foxford")

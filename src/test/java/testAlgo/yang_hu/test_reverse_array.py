@@ -1,7 +1,8 @@
-import pytest
 from typing import List
-from src.main.java.testAlgo.yang_hu.reverse_array import reverse_array
 
+import pytest
+
+from src.main.java.testAlgo.yang_hu.reverse_array import reverse_array
 
 test_data = [
     ([50, 60, 70, 80, 90], [90, 80, 70, 60, 50]),

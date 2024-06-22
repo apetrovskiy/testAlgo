@@ -1,9 +1,10 @@
-import pytest
 from typing import List
+
+import pytest
+
 from src.main.java.testAlgo.yang_hu.dichotomy_binary_search import (
     dichotomy_binary_search,
 )
-
 
 test_data = [
     ([30, 40, 50, 70, 85, 90, 100], 50, 2),
