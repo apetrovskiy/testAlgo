@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. update.env
+. ./update.env
 cd ..
 
 dotnet clean

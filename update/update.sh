@@ -5,7 +5,7 @@ PYTHON_VERSION=3.12
 
 # brew upgrade allure go
 
-. update.env
+source update.env
 cd ..
 
 go mod edit --go="${GO_VERSION}"

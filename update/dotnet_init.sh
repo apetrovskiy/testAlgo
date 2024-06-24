@@ -2,7 +2,7 @@
 
 # not in use?
 
-. update.env
+. ./update.env
 cd ..
 
 rm allure-results/* -y
