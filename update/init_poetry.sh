@@ -7,8 +7,10 @@ PYTHON_VERSION=3.12
 . ./update.env
 cd ..
 
-poetry env remove "python${PYTHON_VERSION}"
 rm -rf ~/Library/Caches/pypoetry/cache
+rm -rf ~/.cache/pypoetry/cache/
+rm -rf ~/.cache/pypoetry/artifacts/
+poetry env remove "python${PYTHON_VERSION}"
 poetry env use python3.12
 # https://github.com/python-poetry/poetry/issues/1422
 # run
