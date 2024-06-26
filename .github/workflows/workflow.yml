@@ -47,19 +47,32 @@ jobs:
     - name: Install poetry
       run: pipx install poetry
     - run: poetry install
+    # v1.0
+    # - name: Lint with autoflake and black
+    #   run: |
+    #     pipenv run autoflake --in-place --remove-unused-variables --recursive --check --quiet .
+    #     pipenv run black . --check
     - name: Lint with autoflake and black
       run: |
-        pipenv run autoflake --in-place --remove-unused-variables --recursive --check --quiet .
-        pipenv run black . --check
+        poetry run autoflake --in-place --remove-unused-variables --recursive --check --quiet .
+        poetry run black . --check
+    # disabled temporarily
+    # v1.0
     # - name: Lint with pylint
     #   run: |
     #     pipenv run pylint src
     #     pipenv run pylint features
+    # v1.0
+    # - name: Test with pytest
+    #   if: always()
+    #   run: |
+    #     pwd
+    #     pipenv run pytest src/ --alluredir=allure-results
     - name: Test with pytest
       if: always()
       run: |
         pwd
-        pipenv run pytest src/ --alluredir=allure-results
+        poetry run pytest src/ --alluredir=allure-resultspoetry
 #     - name: Analysing the code with pylint
 #       run: |
 #         pylint `ls -R|grep .py$|xargs`
