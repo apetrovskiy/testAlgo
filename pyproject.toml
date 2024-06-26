@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "main"
+name = "testalgo"
 version = "0.1.0"
 description = ""
 authors = ["Alexander Petrovskiy <petrovskiy.alexander@gmail.com>"]
