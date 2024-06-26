@@ -1,7 +1,8 @@
-import pytest
 from typing import List
-from src.main.java.testAlgo.yang_hu.min_value import min_value
 
+import pytest
+
+from src.main.java.testAlgo.yang_hu.min_value import min_value
 
 test_data = [
     ([60, 80, 95, 50, 70], 50),

@@ -1,7 +1,8 @@
-import pytest
 from typing import List
-from src.main.java.testAlgo.yang_hu.shell_sorting import shell_sorting
 
+import pytest
+
+from src.main.java.testAlgo.yang_hu.shell_sorting import shell_sorting
 
 test_data = [([9, 6, 5, 8, 0, 7, 4, 3, 1, 2], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])]
 

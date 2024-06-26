@@ -1,7 +1,8 @@
-import pytest
 from typing import List
-from src.main.java.testAlgo.yang_hu.select_sorting import select_sorting
 
+import pytest
+
+from src.main.java.testAlgo.yang_hu.select_sorting import select_sorting
 
 test_data = [
     ([60, 80, 95, 50, 70], [50, 60, 70, 80, 95]),

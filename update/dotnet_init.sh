@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# not in use?
+
 . update.env
 cd ..
 
@@ -13,9 +15,9 @@ rm -f "${TEST_PRJ_FILE}"
 rm -f src/test/Class1.cs
 rm -f "${MAIN_PRJ_FILE}"
 rm -f src/main/Class1.cs
-rm -f testLeCo.sln
+rm -f "${PROJECT_NAME}.sln"
 
-dotnet new sln --name testLeCo
+dotnet new sln --name "${PROJECT_NAME}"
 dotnet new classlib --name main --framework net8.0 --output src/main
 dotnet new classlib --name test --framework net8.0 --output src/test
 dotnet sln add "${MAIN_PRJ_FILE}"

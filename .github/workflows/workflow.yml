@@ -1,4 +1,4 @@
-name: Python 3.9, Ruby 2.7, Node.js 16, Java 17, .NET 5, Go 1.16, Swift, Dart, allure
+name: Python 3.12, Ruby 2.7, Node.js 21, Java 17, .NET 8, Go 1.22, Swift, Dart, allure
 
 # on: [push]
 on:
@@ -18,7 +18,7 @@ jobs:
     #     node-version: [16.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
   python:
     runs-on: ubuntu-latest
@@ -26,23 +26,35 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: ./.github/actions/allure-prep
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v4
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v5
       with:
-        python-version: 3.9
+        python-version: 3.12
 
+    - name: Install pipenv
+      run: pipx install pipenv
+    - run: pipenv sync
+    # - name: Install dependencies
+    #   run: |
+    #     python -m pip install --upgrade pip
+    #     pip install -r requirements.txt
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: Lint with flake8
+        pipenv install
+        pipenv install --dev
+    - name: Lint with autoflake and black
       run: |
-        flake8 .
+        pipenv run autoflake --in-place --remove-unused-variables --recursive --check --quiet .
+        pipenv run black . --check
+    # - name: Lint with pylint
+    #   run: |
+    #     pipenv run pylint src
+    #     pipenv run pylint features
     - name: Test with pytest
       if: always()
       run: |
         pwd
-        pytest src/ --alluredir=allure-results
+        pipenv run pytest src/ --alluredir=allure-results
 #     - name: Analysing the code with pylint
 #       run: |
 #         pylint `ls -R|grep .py$|xargs`
@@ -54,13 +66,14 @@ jobs:
     # TODO: de-duplicate
     - name: Archive Allure results
       if: always()
+      # uses: actions/upload-artifact@v4
       uses: actions/upload-artifact@v2
       with:
         name: allure-results
         path: allure-results
     # - name: Archive Allure reports
     #   if: always()
-    #   uses: actions/upload-artifact@v2
+    #   uses: actions/upload-artifact@v4
     #   with:
     #     name: allure-reports
     #     path: allure-reports
@@ -73,7 +86,7 @@ jobs:
         # ruby-version: ['2.6', '2.7', '3.0']
         ruby-version: ['2.7']
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: ./.github/actions/allure-prep
 
     - name: Experimental installation
@@ -109,13 +122,13 @@ jobs:
     # TODO: de-duplicate
     - name: Archive Allure results
       if: always()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: allure-results
         path: allure-results
     # - name: Archive Allure reports
     #   if: always()
-    #   uses: actions/upload-artifact@v2
+    #   uses: actions/upload-artifact@v4
     #   with:
     #     name: allure-reports
     #     path: allure-reports
@@ -126,9 +139,9 @@ jobs:
     strategy:
       matrix:
         # node-version: [10.x, 12.x, 14.x, 15.x, 16.x]
-        node-version: [16.x]
+        node-version: [21.x]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: ./.github/actions/allure-prep
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
@@ -147,13 +160,13 @@ jobs:
     # TODO: de-duplicate
     - name: Archive Allure results
       if: always()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: allure-results
         path: allure-results
     # - name: Archive Allure reports
     #   if: always()
-    #   uses: actions/upload-artifact@v2
+    #   uses: actions/upload-artifact@v4
     #   with:
     #     name: allure-reports
     #     path: allure-reports
@@ -162,13 +175,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: ./.github/actions/allure-prep
     - name: Set up Go
-      uses: actions/setup-go@v2
+      uses: actions/setup-go@v5
       if: always()
       with:
-        go-version: 1.16
+        go-version: 1.22
 
     - name: Build
       if: always()
@@ -201,13 +214,13 @@ jobs:
     # TODO: de-duplicate
     - name: Archive Allure results
       if: always()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: allure-results
         path: allure-results
     # - name: Archive Allure reports
     #   if: always()
-    #   uses: actions/upload-artifact@v2
+    #   uses: actions/upload-artifact@v4
     #   with:
     #     name: allure-reports
     #     path: allure-reports
@@ -216,10 +229,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: ./.github/actions/allure-prep
     - name: Set up JDK 17
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v4
       if: always()
       with:
         java-version: '17'
@@ -250,46 +263,30 @@ jobs:
     # TODO: de-duplicate
     - name: Archive Allure results
       if: always()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: allure-results
         path: allure-results
     # - name: Archive Allure reports
     #   if: always()
-    #   uses: actions/upload-artifact@v2
+    #   uses: actions/upload-artifact@v4
     #   with:
     #     name: allure-reports
     #     path: allure-reports
 
-  dotnet-format:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-
-      - name: Add dotnet-format problem matcher
-        uses: xt0rted/dotnet-format-problem-matcher@v1
-
-      - name: Restore dotnet tools
-        uses: xt0rted/dotnet-tool-restore@v1
-
-      - name: Run dotnet format
-        uses: xt0rted/dotnet-format@v1
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
   dotnet:
     runs-on: ubuntu-latest
     needs:
       - build
       # - dotnet-format
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: ./.github/actions/allure-prep
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v4
       if: always()
       with:
-        dotnet-version: 7.0.x
+        dotnet-version: 8.0.x
     - name: Print donten version
       if: always()
       run: dotnet --version
@@ -301,6 +298,9 @@ jobs:
     #   run: |
     #     run: dotnet tool update -g dotnet-format
     #     dotnet-format --check
+    - name: Format check
+      if: always()
+      run: dotnet format --verify-no-changes -v d
     - name: Build
       if: always()
       run: dotnet build --no-restore
@@ -315,13 +315,13 @@ jobs:
     # TODO: de-duplicate
     - name: Archive Allure results
       if: always()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: allure-results
         path: allure-results
     # - name: Archive Allure reports
     #   if: always()
-    #   uses: actions/upload-artifact@v2
+    #   uses: actions/upload-artifact@v4
     #   with:
     #     name: allure-reports
     #     path: allure-reports
@@ -331,7 +331,7 @@ jobs:
     needs: build
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Build
       run: swift build -v
     - name: Run tests
@@ -344,7 +344,7 @@ jobs:
     # TODO: de-duplicate
     - name: Archive Allure results
       if: always()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: allure-results
         path: allure-results
@@ -354,13 +354,13 @@ jobs:
     needs: build
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     # Note: This workflow uses the latest stable version of the Dart SDK.
     # You can specify other versions if desired, see documentation here:
     # https://github.com/dart-lang/setup-dart/blob/main/README.md
     # - uses: dart-lang/setup-dart@v1
-    - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
+    - uses: dart-lang/setup-dart@v1
 
     - name: Install dependencies
       run: dart pub get
@@ -391,7 +391,7 @@ jobs:
     # # TODO: de-duplicate
     # - name: Archive Allure results
     #   if: always()
-    #   uses: actions/upload-artifact@v2
+    #   uses: actions/upload-artifact@v4
     #   with:
     #     name: allure-results
     #     path: allure-results
@@ -415,48 +415,50 @@ jobs:
       uses: actions/download-artifact@v2
 
     - name: Get Allure history
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       if: always()
       continue-on-error: true
       with:
         ref: gh-pages
         path: gh-pages
 
-    - name: Allure Report with history
-      uses: simple-elf/allure-report-action@v1.5
-      if: always()
+    # - name: Allure Report with history
+    #   uses: simple-elf/allure-report-action@master
+    #   if: always()
 
-    - name: Allure Report action from marketplace
+    # - name: Allure Report action from marketplace
+    #   uses: simple-elf/allure-report-action@master
+    #   if: always()
+    #   #id: allure-report
+    #   with:
+    #     allure_results: allure-results
+    #     gh_pages: gh-pages
+    #     allure_report: allure-report
+    #     allure_history: allure-history
+    #     keep_reports: 50
+
+    # - name: Deploy report to Github Pages
+    #   if: always()
+    #   # uses: peaceiris/actions-gh-pages@v4
+    #   uses: peaceiris/actions-gh-pages@v2
+    #   env:
+    #     PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #     PUBLISH_BRANCH: gh-pages
+    #     PUBLISH_DIR: allure-history
+
+    - name: Build test report
       uses: simple-elf/allure-report-action@master
       if: always()
-      #id: allure-report
       with:
-        allure_results: allure-results
         gh_pages: gh-pages
-        allure_report: allure-report
         allure_history: allure-history
+        allure_results: allure-results
         keep_reports: 50
 
-    - name: Deploy report to Github Pages
+    - name: Publish test report
+      uses: peaceiris/actions-gh-pages@v3
       if: always()
-      uses: peaceiris/actions-gh-pages@v2
-      env:
-        PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: allure-history
-  # dotnet-format:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout repo
-  #       uses: actions/checkout@v2
-
-  #     - name: Add dotnet-format problem matcher
-  #       uses: xt0rted/dotnet-format-problem-matcher@v1
-
-  #     - name: Restore dotnet tools
-  #       uses: xt0rted/dotnet-tool-restore@v1
-
-  #     - name: Run dotnet format
-  #       uses: xt0rted/dotnet-format@v1
-  #       with:
-  #         repo-token: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: allure-history
