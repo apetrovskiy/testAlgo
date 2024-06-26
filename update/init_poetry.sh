@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PACKAGE_NAME=main
-PACKAGE_FOLDER_NAME=testAlgo
+PACKAGE_FOLDER_NAME=${PROJECT_NAME}
 PYTHON_VERSION=3.12
 
 . ./update.env
