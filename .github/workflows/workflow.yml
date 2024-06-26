@@ -72,7 +72,7 @@ jobs:
       if: always()
       run: |
         pwd
-        poetry run pytest src/ --alluredir=allure-resultspoetry
+        poetry run pytest src/ --alluredir=allure-results
 #     - name: Analysing the code with pylint
 #       run: |
 #         pylint `ls -R|grep .py$|xargs`
