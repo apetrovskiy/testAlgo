@@ -15,16 +15,16 @@ npm update
 npm audit fix
 npm audit fix --force
 
-pipenv --venv
-pipenv --rm
-pipenv --venv
-rm Pipfile*
-pipenv install --python "${PYTHON_VERSION}" &&
-    pipenv install pytest allure-pytest pytest-xdist typing-extensions pytest-test-groups --pre &&
-    pipenv install python-dotenv pytest-tagging pyhamcrest parameterized --pre &&
-    pipenv install --dev pycodestyle pylint pyflakes flake8 yapf autopep8 --pre &&
-    pipenv install --dev black isort autoformat autoflake --pre
-pipenv lock
+# pipenv --venv
+# pipenv --rm
+# pipenv --venv
+# rm Pipfile*
+# pipenv install --python "${PYTHON_VERSION}" &&
+#     pipenv install pytest allure-pytest pytest-xdist typing-extensions pytest-test-groups --pre &&
+#     pipenv install python-dotenv pytest-tagging pyhamcrest parameterized --pre &&
+#     pipenv install --dev pycodestyle pylint pyflakes flake8 yapf autopep8 --pre &&
+#     pipenv install --dev black isort autoformat autoflake --pre
+# pipenv lock
 
 dart pub remove test
 dart pub remove lints
