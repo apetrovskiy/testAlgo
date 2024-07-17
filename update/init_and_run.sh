@@ -1,10 +1,12 @@
 #!/bin/sh
 
+# not in use?
+
 FULL_RESTORE=0
 # 0 - runs code operations without the Internet
 # 1 - reloads packages
 
-. update.env
+. ./update.env
 cd ..
 
 rm allure-results/* -y
